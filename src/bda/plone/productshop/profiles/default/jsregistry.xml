@@ -10,6 +10,7 @@
     inline="False" />
 
   <!-- tmp -->
+  <!--
   <javascript
     id="++resource++plone.formwidget.autocomplete/jquery.autocomplete.min.js"
     cacheable="True"
@@ -29,6 +30,7 @@
     expression=""
     inline="False"
     insert-after="++resource++plone.formwidget.autocomplete/jquery.autocomplete.min.js" />
+  -->
   <!-- /tmp -->
 
 </object>

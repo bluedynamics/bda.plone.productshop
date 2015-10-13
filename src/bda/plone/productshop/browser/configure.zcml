@@ -174,7 +174,11 @@
   <!-- forms -->
   <adapter
     for="Products.CMFCore.interfaces.IFolderish
+<<<<<<< HEAD
          *
+=======
+         bda.plone.productshop.interfaces.IProductShopExtensionLayer
+>>>>>>> make it install and model functionality work in plone 5
          plone.dexterity.interfaces.IDexterityFTI"
     provides="zope.publisher.interfaces.browser.IBrowserPage"
     name="bda.plone.productshop.variant"

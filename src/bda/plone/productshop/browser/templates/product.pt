@@ -1,6 +1,7 @@
 <div xmlns="http://www.w3.org/1999/xhtml"
      xml:lang="en"
      xmlns:tal="http://xml.zope.org/namespaces/tal"
+     xmlns:ajax="http://namesspaces.bluedynamics.eu/ajax"
      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
      xmlns:ajax="http://namesspaces.bluedynamics.eu/ajax"
      i18n:domain="bda.plone.productshop"
