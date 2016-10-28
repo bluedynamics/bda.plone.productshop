@@ -14,12 +14,14 @@
     <img src=""
          alt=""
          class="product_image"
+         i18n:attributes="alt"
          tal:condition="image"
          tal:replace="structure image" />
 
     <img src="++resource++dummy_product.jpg"
-         alt="product image"
+         alt="product_image"
          class="product_image"
+         i18n:attributes="alt product_image"
          tal:condition="not:image" />
   </span>
 
