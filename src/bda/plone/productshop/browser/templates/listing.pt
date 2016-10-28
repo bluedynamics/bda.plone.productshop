@@ -27,11 +27,13 @@
     <a href=""
        tal:attributes="href product/obj/absolute_url">
       <img src="" alt=""
+           i18n:attributes="alt"
            tal:condition="product/preview"
            tal:replace="structure product/preview" />
       <img src="++resource++dummy_listing_product.jpg"
            alt="preview"
            class="product_listing_image"
+           i18n:attributes="alt preview"
            tal:condition="not:product/preview" />
     </a>
 
