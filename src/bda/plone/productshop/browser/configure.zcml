@@ -9,13 +9,11 @@
   <!-- browser resources -->
   <browser:resource
     name="productshop.css"
-    file="resources/productshop.css"
-    layer="..interfaces.IProductShopExtensionLayer" />
+    file="resources/productshop.css" />
 
   <browser:resource
     name="productshop.js"
-    file="resources/productshop.js"
-    layer="..interfaces.IProductShopExtensionLayer" />
+    file="resources/productshop.js" />
 
   <browser:resource
     name="product.png"
