@@ -59,61 +59,61 @@
     for="plone.dexterity.interfaces.IDexterityContent" />
 
   <plone:behavior
-    title="Product Shop: Color"
+    title="Product Shop: Variant Aspect Color"
     description="Extend content with product color variant."
     provides=".behaviors.IColorBehavior"
     for="collective.instancebehavior.IInstanceBehaviorAssignableContent" />
 
   <plone:behavior
-    title="Product Shop: Weight"
+    title="Product Shop: Variant Aspect Weight"
     description="Extend content with product weight."
     provides=".behaviors.IWeightBehavior"
     for="collective.instancebehavior.IInstanceBehaviorAssignableContent" />
 
   <plone:behavior
-    title="Product Shop: Size"
+    title="Product Shop: Variant Aspect Size"
     description="Extend content with product size."
     provides=".behaviors.ISizeBehavior"
     for="collective.instancebehavior.IInstanceBehaviorAssignableContent" />
 
   <plone:behavior
-    title="Product Shop: Demand"
+    title="Product Shop: Variant Aspect Demand"
     description="Extend content with product demand."
     provides=".behaviors.IDemandBehavior"
     for="collective.instancebehavior.IInstanceBehaviorAssignableContent" />
 
   <plone:behavior
-    title="Product Shop: Length"
+    title="Product Shop: Variant Aspect Length"
     description="Extend content with product length."
     provides=".behaviors.ILengthBehavior"
     for="collective.instancebehavior.IInstanceBehaviorAssignableContent" />
 
   <plone:behavior
-    title="Product Shop: Width"
+    title="Product Shop: Variant Aspect Width"
     description="Extend content with product width."
     provides=".behaviors.IWidthBehavior"
     for="collective.instancebehavior.IInstanceBehaviorAssignableContent" />
 
   <plone:behavior
-    title="Product Shop: Height"
+    title="Product Shop: Variant Aspect Height"
     description="Extend content with product height."
     provides=".behaviors.IHeightBehavior"
     for="collective.instancebehavior.IInstanceBehaviorAssignableContent" />
 
   <plone:behavior
-    title="Product Shop: IP Code"
+    title="Product Shop: Variant Aspect IP Code"
     description="Extend content with international protection code."
     provides=".behaviors.IIPCodeBehavior"
     for="collective.instancebehavior.IInstanceBehaviorAssignableContent" />
 
   <plone:behavior
-    title="Product Shop: Angle"
+    title="Product Shop: Variant Aspect Angle"
     description="Extend content with angle."
     provides=".behaviors.IAngleBehavior"
     for="collective.instancebehavior.IInstanceBehaviorAssignableContent" />
 
   <plone:behavior
-    title="Product Shop: Material"
+    title="Product Shop: Variant Aspect Material"
     description="Extend content with material."
     provides=".behaviors.IMaterialBehavior"
     for="collective.instancebehavior.IInstanceBehaviorAssignableContent" />
