@@ -1,5 +1,6 @@
 <configure xmlns="http://namespaces.zope.org/zope"
            xmlns:browser="http://namespaces.zope.org/browser"
+           xmlns:zcml="http://namespaces.zope.org/zcml"
            i18n_domain="bda.plone.productshop">
 
   <include package="plone.app.contentmenu" />
@@ -8,8 +9,24 @@
 
   <!-- browser resources -->
   <browser:resource
+    zcml:condition="have plone-5"
     name="productshop.css"
-    file="resources/productshop.css" />
+    file="resources/productshop_p5.css" />
+
+  <browser:resource
+    zcml:condition="have plone-5"
+    name="productshop.css.map"
+    file="resources/productshop_p5.css.map" />
+
+  <browser:resource
+    zcml:condition="have plone-5"
+    name="productshop.less"
+    file="resources/productshop_p5.less" />
+
+  <browser:resource
+    zcml:condition="not-have plone-5"
+    name="productshop.css"
+    file="resources/productshop_p4.css" />
 
   <browser:resource
     name="productshop.js"
