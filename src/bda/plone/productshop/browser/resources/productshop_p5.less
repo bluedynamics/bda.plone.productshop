@@ -6,3 +6,31 @@
 
 @import (less) "productshop_p4.css";
 
+
+div.product {
+    margin-top:1em;
+    padding-top:1em;
+    border-top:0;
+    border-bottom:#cccccc 1px solid;
+}
+
+div.product:last-of-type {
+    border-bottom: 0;
+}
+
+div.product {
+    h3 {
+        margin-top: 0;
+    }
+    .buyable.viewlet {
+        margin-bottom: 0em;
+    }
+}
+
+// disable tabs for now
+.shopview_tabs {
+    display: none;
+}
+.shopview_panes div {
+    display: block!important;
+}
