@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 from bda.plone.productshop.utils import available_variant_aspects
 from bda.plone.productshop.utils import dotted_name
+<<<<<<< HEAD
+=======
+from zope.i18nmessageid import MessageFactory
+>>>>>>> use image scales from plone.app.vocabulary
 from zope.interface import provider
 from zope.schema.interfaces import IVocabularyFactory
 from zope.schema.vocabulary import SimpleTerm

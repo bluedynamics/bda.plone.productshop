@@ -71,6 +71,7 @@ class IProductShopSettings(model.Schema):
     )
 
     product_tiles_view_image_scale = schema.Choice(
+<<<<<<< HEAD
         title=_(
             u"product_tiles_view_image_scale_title",
             default=u"Product tiles image scale",
@@ -82,3 +83,11 @@ class IProductShopSettings(model.Schema):
         vocabulary="plone.app.vocabularies.ImagesScales",
         required=False,
     )
+=======
+        title=_(u'product_tiles_view_image_scale_title',
+                default=u'Product tiles image scale'),
+        description=_(u'product_tiles_view_image_scale_description',
+                      default=u'Image scale used for product tiles'),
+        vocabulary='plone.app.vocabularies.ImagesScales',
+        required=False)
+>>>>>>> use image scales from plone.app.vocabulary
