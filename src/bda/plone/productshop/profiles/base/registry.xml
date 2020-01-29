@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<registry>
-  <records interface="bda.plone.productshop.interfaces.IProductShopSettings">
-    <value key="product_tiles_view_columns" purge="false">4</value>
-    <value key="product_tiles_view_image_scale" purge="false">preview</value>
-  </records>
-</registry>

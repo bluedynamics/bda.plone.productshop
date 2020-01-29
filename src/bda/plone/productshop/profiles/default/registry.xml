@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
-<registry xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-          i18n:domain="bda.plone.shop">
+<registry>
 
   <records prefix="plone.bundles/productshop"
            interface='Products.CMFPlone.interfaces.IBundleRegistry'>
@@ -12,4 +11,8 @@
     <value key="jscompilation">++resource++productshop.js</value>
   </records>
 
+  <records interface="bda.plone.productshop.interfaces.IProductShopSettings">
+    <value key="product_tiles_view_columns" purge="false">4</value>
+    <value key="product_tiles_view_image_scale" purge="false">preview</value>
+  </records>
 </registry>

@@ -4,26 +4,10 @@
            i18n_domain="bda.plone.productshop">
 
   <genericsetup:registerProfile
-      zcml:condition="have plone-5"
       name="default"
       title="bda.plone.productshop"
-      directory="profiles/plone5"
+      directory="profiles/default"
       description="Product shop extension for bda.plone.shop"
-      provides="Products.GenericSetup.interfaces.EXTENSION" />
-
-  <genericsetup:registerProfile
-      zcml:condition="not-have plone-5"
-      name="default"
-      title="bda.plone.productshop"
-      directory="profiles/plone4"
-      description="Product shop extension for bda.plone.shop"
-      provides="Products.GenericSetup.interfaces.EXTENSION" />
-
-  <genericsetup:registerProfile
-      name="install-base"
-      title="bda.plone.productshop"
-      directory="profiles/base"
-      description="Base profile for bda.plone.productshop"
       provides="Products.GenericSetup.interfaces.EXTENSION" />
 
   <utility
