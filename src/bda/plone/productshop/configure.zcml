@@ -21,10 +21,6 @@
     component=".vocabularies.AvailableVariantAspectsVocabulary"
     name="bda.plone.productshop.AvailableVariantAspectsVocabulary" />
 
-<<<<<<< HEAD
-=======
-
->>>>>>> use image scales from plone.app.vocabulary
   <!-- DX behaviors -->
   <plone:behavior
     name="bda.productshop.excludefromnav"
