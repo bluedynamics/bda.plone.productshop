@@ -35,9 +35,9 @@
     <element value="bda.shop.buyableperiod" />
 
     <!-- shop view related -->
-    <element value="productshop.excludefromnav" />
-    <element value="productshop.variant" />
-    <element value="productshop.productmanual" />
+    <element value="bda.productshop.excludefromnav" />
+    <element value="bda.productshop.variant" />
+    <element value="bda.productshop.productmanual" />
     <element value="plone.relateditems" />
   </property>
 
