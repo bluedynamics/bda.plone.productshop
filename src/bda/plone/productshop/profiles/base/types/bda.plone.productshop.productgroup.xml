@@ -22,18 +22,18 @@
 
   <property name="behaviors">
     <!-- basic -->
-    <element value="plone.app.content.interfaces.INameFromTitle"/>
-    <element value="plone.app.dexterity.behaviors.metadata.IBasic"/>
-    <element value="plone.app.dexterity.behaviors.metadata.ICategorization"/>
+    <element value="plone.namefromtitle"/>
+    <element value="plone.basic"/>
+    <element value="plone.categorization"/>
 
     <!-- shop related -->
-    <element value="bda.plone.shop.dx.IItemNotificationTextBehavior" />
-    <element value="bda.plone.shop.dx.IGlobalNotificationTextBehavior" />
+    <element value="bda.shop.notificationtext.item" />
+    <element value="bda.shop.notificationtext.global" />
 
     <!-- shop view related -->
-    <element value="bda.plone.productshop.behaviors.IProductExcludeFromNavigation" />
+    <element value="productshop.excludefromnav" />
     <element value="bda.plone.productshop.behaviors.IProductGroupBehavior" />
-    <element value="plone.app.relationfield.behavior.IRelatedItems" />
+    <element value="plone.relateditems" />
   </property>
 
   <!-- View information -->
