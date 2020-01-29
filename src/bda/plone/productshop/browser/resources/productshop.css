@@ -261,10 +261,4 @@ div.product h3 {
 div.product .buyable.viewlet {
   margin-bottom: 0em;
 }
-.shopview_tabs {
-  display: none;
-}
-.shopview_panes div {
-  display: block!important;
-}
 /*# sourceMappingURL=++resource++bda.plone.productshop.css.map */

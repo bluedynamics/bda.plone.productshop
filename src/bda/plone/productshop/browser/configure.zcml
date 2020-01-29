@@ -9,24 +9,16 @@
 
   <!-- browser resources -->
   <browser:resource
-    zcml:condition="have plone-5"
     name="productshop.css"
-    file="resources/productshop_p5.css" />
+    file="resources/productshop.css" />
 
   <browser:resource
-    zcml:condition="have plone-5"
     name="productshop.css.map"
-    file="resources/productshop_p5.css.map" />
+    file="resources/productshop.css.map" />
 
   <browser:resource
-    zcml:condition="have plone-5"
     name="productshop.less"
-    file="resources/productshop_p5.less" />
-
-  <browser:resource
-    zcml:condition="not-have plone-5"
-    name="productshop.css"
-    file="resources/productshop_p4.css" />
+    file="resources/productshop.less" />
 
   <browser:resource
     name="productshop.js"

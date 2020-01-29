@@ -10,26 +10,26 @@ module.exports = function (grunt) {
                     sourceMap: true,
                     outputSourceFiles: true,
                     sourceMapURL: '++resource++bda.plone.productshop.css.map',
-                    sourceMapFilename: 'src/bda/plone/productshop/browser/resources/productshop_p5.css.map',
+                    sourceMapFilename: 'src/bda/plone/productshop/browser/resources/productshop.css.map',
                     modifyVars: {
                         "isPlone": "false"
                     }
                 },
                 files: {
-                    'src/bda/plone/productshop/browser/resources/productshop_p5.css': 'src/bda/plone/productshop/browser/resources/productshop_p5.less',
+                    'src/bda/plone/productshop/browser/resources/productshop.css': 'src/bda/plone/productshop/browser/resources/productshop.less',
                 }
             }
         },
         sed: {
             sed0: {
-                path: 'src/bda/plone/productshop/browser/resources/productshop_p5.css.map',
-                pattern: 'src/bda/plone/productshop/browser/resources/productshop_p5.less',
+                path: 'src/bda/plone/productshop/browser/resources/productshop.css.map',
+                pattern: 'src/bda/plone/productshop/browser/resources/productshop.less',
                 replacement: '++resource++bda.plone.productshop.less',
             }
         },
         watch: {
             scripts: {
-                files: ['src/bda/plone/productshop/browser/resources/productshop_p5.less'],
+                files: ['src/bda/plone/productshop/browser/resources/productshop.less'],
                 tasks: ['less', 'sed']
             }
         }
