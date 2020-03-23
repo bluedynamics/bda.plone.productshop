@@ -5,7 +5,7 @@ Changelog
 0.9.dev0
 --------
 
-- no changes yet.
+- Remove binding to CMFDefault skin in ZCML [jensens]
 
 
 0.8
