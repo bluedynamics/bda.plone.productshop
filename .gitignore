@@ -6,6 +6,7 @@
 /.project
 /.pydevproject
 /.settings/
+/.vscode/
 /src/bda.plone.productshop.egg-info/
 /src/bda/plone/productshop/profiles/.DS_Store
 /bin/

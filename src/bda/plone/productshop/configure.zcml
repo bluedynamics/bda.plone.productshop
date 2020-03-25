@@ -21,10 +21,6 @@
     component=".vocabularies.AvailableVariantAspectsVocabulary"
     name="bda.plone.productshop.AvailableVariantAspectsVocabulary" />
 
-  <utility
-    component=".vocabularies.ImageScaleVocabulary"
-    name="bda.plone.productshop.ImageScaleVocabulary" />
-
   <!-- DX behaviors -->
   <plone:behavior
     title="Product Shop: Exclude From navigation for products"

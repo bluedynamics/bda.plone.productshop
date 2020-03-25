@@ -69,5 +69,5 @@ class IProductShopSettings(model.Schema):
                 default=u'Product tiles image scale'),
         description=_(u'product_tiles_view_image_scale_description',
                       default=u'Image scale used for product tiles'),
-        vocabulary='bda.plone.productshop.ImageScaleVocabulary',
+        vocabulary='plone.app.vocabularies.ImagesScales',
         required=False)

@@ -20,6 +20,7 @@ from Products.Five import BrowserView
 from random import shuffle
 from zope.component import getUtility
 from zope.i18nmessageid import MessageFactory
+
 import json
 
 
@@ -531,7 +532,7 @@ class VariantLookup(BrowserView, AspectsExtraction):
         criteria = self.aspects_criteria
         try:
             product_group = self.product_group
-        except ValueError, e:
+        except ValueError as e:
             return json.dumps({
                 'found': False,
                 'error': str(e),
