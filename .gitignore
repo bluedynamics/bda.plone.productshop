@@ -9,6 +9,7 @@
 /.vscode/
 /src/bda.plone.productshop.egg-info/
 /src/bda/plone/productshop/profiles/.DS_Store
+/buildout.cfg
 /bin/
 /develop-eggs/
 /devsrc/
