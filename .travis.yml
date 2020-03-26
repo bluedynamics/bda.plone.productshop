@@ -5,6 +5,7 @@ cache:
   pip: true
   directories:
   - eggs
+  - devsrc
 matrix:
   include:
     - python: "2.7"
