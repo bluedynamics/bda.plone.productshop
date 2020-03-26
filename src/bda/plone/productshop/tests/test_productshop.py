@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 from bda.plone.productshop.tests import ProductShop_INTEGRATION_TESTING
 from bda.plone.productshop.tests import set_browserlayer
-import unittest2 as unittest
+
+import unittest
 
 
 class TestProductShop(unittest.TestCase):
