@@ -16,7 +16,7 @@ from zope.component import getUtility
 
 def get_default_variant_aspects(context):
     try:
-        default_aspects = getattr(context, 'default_variant_aspects')
+        default_aspects = getattr(context, "default_variant_aspects")
     except AttributeError:
         return list()
     ret = list()
@@ -30,7 +30,6 @@ def get_default_variant_aspects(context):
 
 
 class VariantAddForm(DefaultAddForm):
-
     @property
     def additionalSchemata(self):
         for behavior in getAdditionalSchemata(portal_type=self.portal_type):
@@ -45,7 +44,7 @@ class VariantAddForm(DefaultAddForm):
         container = aq_inner(self.context)
         content = createObject(fti.factory)
 
-        if hasattr(content, '_setPortalTypeName'):
+        if hasattr(content, "_setPortalTypeName"):
             content._setPortalTypeName(fti.getId())
 
         if IAcquirer.providedBy(content):

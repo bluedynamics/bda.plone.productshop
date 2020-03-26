@@ -11,6 +11,7 @@ from zope.schema.vocabulary import SimpleVocabulary
 def AvailableVariantAspectsVocabulary(context):
     terms = list()
     for definition in available_variant_aspects():
-        terms.append(SimpleTerm(value=dotted_name(definition.interface),
-                                title=definition.title))
+        terms.append(
+            SimpleTerm(value=dotted_name(definition.interface), title=definition.title)
+        )
     return SimpleVocabulary(terms)
