@@ -130,7 +130,7 @@
             });
 
             // bind shopview tabs
-            $('ul.shopview_tabs').tabs('div.shopview_panes > div');
+            // $('ul.shopview_tabs').tabs('div.shopview_panes > div');
 
             // aspect filter
             $('div.variant_aspects select').unbind()
