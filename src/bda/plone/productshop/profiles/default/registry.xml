@@ -1,5 +1,16 @@
 <?xml version="1.0"?>
 <registry>
+
+  <records prefix="plone.bundles/productshop"
+           interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+    <value key="enabled">True</value>
+    <value key="compile">False</value>
+    <value key="depends">plone,bda-plone-shop</value>
+    <value key="merge_with">default</value>
+    <value key="csscompilation">++resource++productshop.css</value>
+    <value key="jscompilation">++resource++productshop.js</value>
+  </records>
+
   <records interface="bda.plone.productshop.interfaces.IProductShopSettings">
     <value key="product_tiles_view_columns" purge="false">4</value>
     <value key="product_tiles_view_image_scale" purge="false">preview</value>

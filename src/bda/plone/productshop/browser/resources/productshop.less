@@ -1,3 +1,9 @@
+// Plone 5 Styles
+
+// get Plone variables
+@import url("https://raw.githubusercontent.com/plone/plone.staticresources/master/src/plone/staticresources/static/components/mockup/mockup/patterns/toolbar/variables.less");
+@import url("https://raw.githubusercontent.com/plone/plonetheme.barceloneta/master/plonetheme/barceloneta/theme/less/variables.plone.less");
+
 /* variant aspects */
 div.variant_aspects {
   border-top: #ccc 1px solid;
@@ -7,50 +13,61 @@ div.variant_aspects {
   padding-bottom: 1em;
   margin-bottom: 1em;
 }
+
 div.variant_aspects div.aspect {
   display: inline;
   position: relative;
   margin-left: 0.3em;
   margin-right: 0.3em;
 }
+
 div.variant_aspects div.aspect strong {
   position: relative;
   top: 3px;
 }
+
 div.variant_aspects div.invalid_aspects {
   color: #ff0000;
   padding: 0.3em 0.3em 0 0.3em;
 }
+
 div.variant_aspects div.invalid_aspects a:link,
 div.variant_aspects div.invalid_aspects a:visited,
 div.variant_aspects div.invalid_aspects a:hover {
   color: #ff0000 !important;
 }
+
 div.productgroup_listing_aspects div.variant_aspects {
   padding-bottom: 0;
   margin-bottom: 0;
   border-bottom: none;
 }
+
 /* tiles */
 div.product_tiles {
   display: table;
   width: 100%;
 }
+
 div.product_tiles_row {
   display: table-row;
 }
+
 div.product_tiles_column {
   display: table-cell;
   width: 25%;
 }
+
 div.product_tile {
   border: #ccc 1px solid;
   margin: 1px;
   position: relative;
 }
+
 div.product_tile:hover {
   opacity: 0.8;
 }
+
 div.product_tile_title {
   position: absolute;
   top: 0;
@@ -59,6 +76,7 @@ div.product_tile_title {
   display: table;
   background-color: rgba(0, 0, 0, 0.25);
 }
+
 div.product_tile_title h3 {
   padding: 0 1em 0 1em;
   color: #fff;
@@ -66,6 +84,7 @@ div.product_tile_title h3 {
   vertical-align: middle;
   font-size: 1em;
 }
+
 div.product_tile_description {
   position: absolute;
   bottom: 0;
@@ -75,6 +94,7 @@ div.product_tile_description {
   display: table;
   background-color: rgba(0, 0, 0, 0.25);
 }
+
 div.product_tile_description p {
   margin: 0;
   padding: 0 1em 0 1em;
@@ -83,6 +103,7 @@ div.product_tile_description p {
   vertical-align: middle;
   font-size: 1em;
 }
+
 div.overlay_buyable_controls {
   display: none;
   z-index: 100;
@@ -94,6 +115,7 @@ div.overlay_buyable_controls {
   max-width: 300px;
   min-height: 200px;
 }
+
 div.overlay_buyable_controls div.buyable {
   margin-top: 1em;
   margin-bottom: 1em;
@@ -101,6 +123,7 @@ div.overlay_buyable_controls div.buyable {
   margin-right: 1em;
   text-align: left;
 }
+
 div.overlay_buyable_controls div.availability {
   display: block;
   float: none;
@@ -108,6 +131,7 @@ div.overlay_buyable_controls div.availability {
   margin-bottom: 1em;
   position: relative;
 }
+
 div.overlay_buyable_controls div.availability_details {
   min-width: 0;
   display: block !important;
@@ -117,22 +141,27 @@ div.overlay_buyable_controls div.availability_details {
   border: none;
   box-shadow: none;
 }
+
 div.overlay_buyable_controls div.buyable dl.details {
   border-top: #ccc 1px solid;
   padding-top: 0.8em;
   margin-bottom: 0;
   display: block;
 }
+
 div.overlay_buyable_controls div.buyable dl.details dt {
   margin-left: 0;
 }
+
 div.overlay_buyable_controls div.buyable dl.details dt,
 div.overlay_buyable_controls div.buyable dl.details dd {
   display: block;
 }
+
 div.overlay_buyable_controls div.buyable dd.price.discount {
   font-size: 110%;
 }
+
 div.overlay_buyable_controls a.buyable_add_to_cart:link,
 div.overlay_buyable_controls a.buyable_add_to_cart:active,
 div.overlay_buyable_controls a.buyable_add_to_cart:hover,
@@ -143,29 +172,35 @@ div.overlay_buyable_controls a.buyable_update_cart:hover,
 div.overlay_buyable_controls a.buyable_update_cart:visited {
   margin-left: 0;
 }
+
 /* listing */
 div.no_products {
   margin-top: 1em;
   padding-top: 1em;
   border-top: #cccccc 1px solid;
 }
+
 div.no_products strong {
   font-size: 1.4em;
 }
+
 div.product {
   margin-top: 1em;
   padding-top: 1em;
   border-top: #cccccc 1px solid;
 }
+
 img.product_listing_image {
   margin: 0 auto;
   float: left;
   margin-bottom: 1em;
 }
+
 div.product_info {
   margin-left: 128px;
   padding: 0 0 0 20px;
 }
+
 /* product */
 img.product_image {
   margin: 0 auto;
@@ -173,23 +208,28 @@ img.product_image {
   margin-bottom: 1em;
   cursor: pointer;
 }
+
 #portal-columns div.shopview_panes {
   padding: 20px;
   border-top: 1px solid #cccccc;
   margin-left: 200px;
 }
+
 #portal-columns ul.shopview_tabs {
   margin-bottom: 0;
 }
+
 #portal-columns ul.shopview_tabs li {
   list-style-image: none;
   list-style-type: none;
   display: inline-block;
   margin: 0 0 0 3px;
 }
+
 #portal-columns ul.shopview_tabs li.first {
   margin: 0 0 0 20px;
 }
+
 #portal-columns ul.shopview_tabs li a {
   padding: 6px 15px;
   display: block;
@@ -204,9 +244,11 @@ img.product_image {
   -moz-border-radius-topright: 4px;
   border-top-right-radius: 4px;
 }
+
 #portal-columns ul.shopview_tabs li a:hover {
   background: #DDD;
 }
+
 #portal-columns ul.shopview_tabs li a.current {
   font-weight: bold;
   background: #FFF;
@@ -214,51 +256,64 @@ img.product_image {
   margin-top: 0;
   padding-top: 12px;
 }
+
 #portal-columns div.product_description {
   margin-bottom: 1em;
 }
+
 /* variant */
 .variant_view .documentDescription {
   padding-bottom: 20px;
 }
+
 /* batch */
 div.batch {
   margin-top: 1em;
   padding-top: 1em;
   border-top: #cccccc 1px solid;
 }
+
 div.batch a.page {
   border: #cccccc 1px solid;
   display: inline-block;
   padding: 0.25em 0.5em;
 }
+
 div.batch a.page:hover {
   background-color: #cccccc;
 }
+
 div.batch a.page.current {
   border: #ffffff 1px solid !important;
   color: #333333 !important;
   font-weight: bold;
 }
+
 div.batch a.current:hover {
   background-color: transparent;
 }
+
 div.batch a.page.invisible {
   display: none;
 }
+
 div.product {
   margin-top: 1em;
   padding-top: 1em;
   border-top: 0;
   border-bottom: #cccccc 1px solid;
 }
+
 div.product:last-of-type {
   border-bottom: 0;
 }
-div.product h3 {
-  margin-top: 0;
+
+div.product {
+  h3 {
+    margin-top: 0;
+  }
+
+  .buyable.viewlet {
+    margin-bottom: 0em;
+  }
 }
-div.product .buyable.viewlet {
-  margin-bottom: 0em;
-}
-/*# sourceMappingURL=++resource++bda.plone.productshop.css.map */

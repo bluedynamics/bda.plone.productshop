@@ -30,3 +30,4 @@
 /.plone.versioncheck.*
 /pip-selfcheck.json
 /share/
+node_modules

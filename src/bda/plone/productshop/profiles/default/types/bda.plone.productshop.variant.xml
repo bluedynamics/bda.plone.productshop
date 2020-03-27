@@ -21,24 +21,24 @@
 
   <property name="behaviors">
     <!-- basic -->
-    <element value="plone.app.content.interfaces.INameFromTitle"/>
-    <element value="plone.app.dexterity.behaviors.metadata.IBasic"/>
-    <element value="plone.app.dexterity.behaviors.metadata.ICategorization"/>
+    <element value="plone.namefromtitle"/>
+    <element value="plone.basic"/>
+    <element value="plone.categorization"/>
 
     <!-- shop related -->
-    <element value="bda.plone.shop.dx.IBuyableBehavior"/>
-    <element value="bda.plone.shop.dx.IStockBehavior"/>
-    <element value="bda.plone.shop.dx.IShippingBehavior"/>
-    <element value="bda.plone.shop.dx.IItemNotificationTextBehavior" />
-    <element value="bda.plone.shop.dx.IGlobalNotificationTextBehavior" />
-    <element value="bda.plone.shop.dx.IBuyablePeriodBehavior" />
-    <element value="bda.plone.shop.dx.ITradingBehavior" />
+    <element value="bda.shop.buyable"/>
+    <element value="bda.shop.stock"/>
+    <element value="bda.shop.shipping"/>
+    <element value="bda.shop.notificationtext.item" />
+    <element value="bda.shop.notificationtext.global" />
+    <element value="bda.shop.buyableperiod" />
+    <element value="bda.shop.buyableperiod" />
 
     <!-- shop view related -->
-    <element value="bda.plone.productshop.behaviors.IProductExcludeFromNavigation" />
-    <element value="bda.plone.productshop.behaviors.IVariantBehavior" />
-    <element value="bda.plone.productshop.behaviors.IProductManualBehavior" />
-    <element value="plone.app.relationfield.behavior.IRelatedItems" />
+    <element value="bda.productshop.excludefromnav" />
+    <element value="bda.productshop.variant" />
+    <element value="bda.productshop.productmanual" />
+    <element value="plone.relateditems" />
   </property>
 
   <!-- View information -->

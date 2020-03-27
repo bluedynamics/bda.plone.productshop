@@ -266,6 +266,7 @@ Contributors
 
 - Robert Niederreiter (Autor)
 - Espen Moe-Nilssen
+- Peter Holzer
 
 
 Dummy product image from
