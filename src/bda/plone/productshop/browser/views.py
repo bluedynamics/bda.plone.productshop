@@ -3,7 +3,7 @@ from AccessControl import getSecurityManager
 from Acquisition import aq_inner
 from Acquisition import aq_parent
 from bda.plone.ajax.batch import Batch
-from bda.plone.cart import get_object_by_uid
+from bda.plone.cart.utils import get_object_by_uid
 from bda.plone.productshop.behaviors import IProductTilesViewSettingsBehavior
 from bda.plone.productshop.interfaces import IProduct
 from bda.plone.productshop.interfaces import IProductGroup
@@ -12,7 +12,7 @@ from bda.plone.productshop.interfaces import IVariant
 from bda.plone.productshop.utils import available_variant_aspects
 from bda.plone.productshop.utils import request_property
 from bda.plone.shop import permissions
-from bda.plone.shop.interfaces import IBuyable
+from bda.plone.orders.interfaces import IBuyable
 from plone.app.contenttypes.behaviors.leadimage import ILeadImage
 from plone.registry.interfaces import IRegistry
 from Products.CMFCore.utils import getToolByName
