@@ -5,6 +5,10 @@ Changelog
 0.9.dev0
 --------
 
+- Fix depreaction warnings in behaviors [jensens]
+
+- Fix Problem with Python 3 division (float instead of int) [jensens]
+
 - Remove binding to CMFDefault skin in ZCML [jensens]
 
 

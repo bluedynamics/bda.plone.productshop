@@ -94,8 +94,9 @@ FALLBACK_TILE_COLUMNS = 4
 
 class ProductTiles(BrowserView):
     def query_tile_items(self, context, tile_items, aggregate=True):
-        brains = [brain for brain in query_children(context)]
+        brains = query_children(context)
         if not aggregate:
+            brains = [brain for brain in brains]
             shuffle(brains)
         for brain in brains:
             if (
@@ -157,7 +158,7 @@ class ProductTiles(BrowserView):
         tile_items = list()
         self.query_tile_items(self.context, tile_items)
         columns = self.tile_columns
-        rows = len(tile_items) / columns
+        rows = int(len(tile_items) / columns)
         if len(tile_items) % columns > 0:
             rows += 1
         ret = list()
