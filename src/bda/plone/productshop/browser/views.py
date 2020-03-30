@@ -93,6 +93,14 @@ FALLBACK_TILE_COLUMNS = 4
 
 
 class ProductTiles(BrowserView):
+    def __init__(self, context, request):
+        super(ProductTiles, self).__init__(context, request)
+        registry = getUtility(IRegistry)
+        self.settings = registry.forInterface(IProductShopSettings)
+        self.tile_bootstrap_column_classes = "col-xs-12 col-sm-6 col-md-{}".format(
+            int(12 / self.tile_columns) or 1
+        )
+
     def query_tile_items(self, context, tile_items, aggregate=True):
         brains = query_children(context)
         if not aggregate:
@@ -138,10 +146,7 @@ class ProductTiles(BrowserView):
             tile_columns = self.context.product_tiles_view_columns
             if tile_columns and tile_columns > 0:
                 return tile_columns
-        # read and return from productshop settings
-        registry = getUtility(IRegistry)
-        settings = registry.forInterface(IProductShopSettings)
-        tile_columns = settings.product_tiles_view_columns
+        tile_columns = self.settings.product_tiles_view_columns
         if tile_columns and tile_columns > 0:
             return tile_columns
         # fallback
@@ -152,72 +157,47 @@ class ProductTiles(BrowserView):
         # read and return from context settings if behavior applied
         if IProductTilesViewSettingsBehavior.providedBy(self.context):
             return self.context.product_tiles_view_image_scale
-        # read and return from productshop settings
-        registry = getUtility(IRegistry)
-        settings = registry.forInterface(IProductShopSettings)
-        return settings.product_tiles_view_image_scale
+        return self.settings.product_tiles_view_image_scale
 
-    def rows(self):
-        tile_items = list()
+    def tiles(self):
+        tile_items = []
         self.query_tile_items(self.context, tile_items)
-        columns = self.tile_columns
-        rows = int(len(tile_items) / columns)
-        if len(tile_items) % columns > 0:
-            rows += 1
         ret = list()
         index = 0
         sm = getSecurityManager()
-        for i in range(rows):
-            row = list()
-            ret.append(row)
-            abort = False
-            for j in range(columns):
-                if index < len(tile_items):
-                    tile_item = tile_items[index]
-                    item_context = self.tile_item_context(tile_item)
-                    if IBuyable.providedBy(item_context) and sm.checkPermission(
-                        permissions.ViewBuyableInfo, item_context
-                    ):
-                        buyable_url = item_context.absolute_url()
-                    else:
-                        buyable_url = None
-                    item_scale = img_scale(tile_item, self.tile_item_image_scale)
-                    if item_scale is not None:
-                        item_preview = item_scale.url
-                    else:
-                        item_preview = "++resource++dummy_product.jpg"
-                    item_style = """
-                        background-image:url('{image}');
-                        background-size:cover;
-                        background-position:center;
-                        background-repeat:no-repeat;
-                    """.format(
-                        image=item_preview
-                    )
-                    item_description = item_context.Description()
-                    item_description = (
-                        item_description and item_description[:60] + "..." or None
-                    )
-                    row.append(
-                        {
-                            "display": True,
-                            "width": 100.0 / columns,
-                            "title": item_context.Title(),
-                            "description": item_description,
-                            "url": item_context.absolute_url(),
-                            "style": item_style,
-                            "buyable_url": buyable_url,
-                        }
-                    )
-                else:
-                    abort = True
-                    row.append(
-                        {"display": False, "width": 100.0 / columns,}
-                    )
-                index += 1
-            if abort:
-                break
-        return ret
+        for tile_item in tile_items:
+            item_context = self.tile_item_context(tile_item)
+            if IBuyable.providedBy(item_context) and sm.checkPermission(
+                permissions.ViewBuyableInfo, item_context
+            ):
+                buyable_url = item_context.absolute_url()
+            else:
+                buyable_url = None
+            item_scale = img_scale(tile_item, self.tile_item_image_scale)
+            if item_scale is not None:
+                item_preview = item_scale.url
+            else:
+                item_preview = "++resource++dummy_product.jpg"
+            item_style = """
+                background-image:url('{image}');
+                background-size:cover;
+                background-position:center;
+                background-repeat:no-repeat;
+            """.format(
+                image=item_preview
+            )
+            item_description = item_context.Description()
+            item_description = (
+                item_description and item_description[:60] + "..." or None
+            )
+            yield {
+                "display": True,
+                "title": item_context.Title(),
+                "description": item_description,
+                "url": item_context.absolute_url(),
+                "style": item_style,
+                "buyable_url": buyable_url,
+            }
 
 
 LISTING_SLICESIZE = 10

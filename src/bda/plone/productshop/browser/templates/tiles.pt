@@ -1,41 +1,29 @@
-<div class="product_tiles">
+<div class="product_tiles row" >
+    <tal:loop tal:repeat="tile python:view.tiles()">
+        <div class="product_tiles_column ${python:view.tile_bootstrap_column_classes}"
+             tal:condition="tile/display">
 
-  <div class="product_tiles_row"
-       tal:repeat="row view/rows">
+            <a href=""
+               tal:attributes="href tile/url">
+                <div class="product_tile"
+                     tal:attributes="style tile/style;
+                                     data-buyable_url tile/buyable_url">
+                    <div class="product_tile_title">
+                        <h3 tal:content="tile/title">
+                        Title
+                        </h3>
+                    </div>
 
-    <tal:column repeat="column row">
-
-      <div class="product_tiles_column"
-           tal:attributes="style string:width:${column/width}%;">
-
-        <tal:product_tile condition="column/display">
-          <a href=""
-             tal:attributes="href column/url">
-            <div class="product_tile"
-                 tal:attributes="style column/style;
-                                 data-buyable_url column/buyable_url">
-
-              <div class="product_tile_title">
-                <h3 tal:content="column/title">
-                  Title
-                </h3>
-              </div>
-
-              <div class="product_tile_description"
-                   tal:condition="column/description">
-                <p tal:content="column/description">
-                  Description
-                </p>
-              </div>
-            </div>
-          </a>
-        </tal:product_tile>
-
-      </div>
-
-    </tal:column>
-
-  </div>
+                    <div class="product_tile_description"
+                        tal:condition="tile/description">
+                        <p tal:content="tile/description">
+                            Description
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </tal:loop>
 
   <div class="overlay_buyable_controls"></div>
 

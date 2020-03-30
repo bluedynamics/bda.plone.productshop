@@ -5,6 +5,8 @@ Changelog
 0.9.dev0
 --------
 
+- Basic responsive tiles view using bootstrap classes [jensens]
+
 - Show empty Folders oder Folders without image in tiles listing [jensens]
 
 - Fix depreaction warnings in behaviors [jensens]

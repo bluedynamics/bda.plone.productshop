@@ -26,22 +26,26 @@
   <div class="product" tal:repeat="product products">
 
     <a href=""
+       class="product_image ${python:'products_link_upload' if product['preview'] else 'products_link_dummy'}"
        tal:attributes="href product/obj/absolute_url">
       <img src="" alt=""
            tal:condition="product/preview"
            tal:replace="structure product/preview" />
       <img src="++resource++dummy_listing_product.jpg"
            alt="preview"
-           class="product_listing_image"
+           class="product_listing_image product_image_dummy"
            tal:condition="not:product/preview" />
     </a>
 
     <div class="product_info">
-      <a href="" tal:attributes="href product/obj/absolute_url">
+      <a href=""
+         class="product_link_title"
+         tal:attributes="href product/obj/absolute_url">
         <h3 tal:content="product/obj/Title">Title</h3>
       </a>
       <p tal:content="product/obj/Description">Description</p>
       <a href=""
+         class="product_link_more"
          tal:attributes="href product/obj/absolute_url"
          i18n:translate="read_more">
         read more...
