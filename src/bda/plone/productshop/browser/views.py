@@ -110,14 +110,17 @@ class ProductTiles(BrowserView):
                 obj = brain.getObject()
                 if ILeadImage.providedBy(obj) and ILeadImage(obj).image:
                     tile_items.append(obj)
+                    continue
+                count = len(tile_items)
+                self.query_tile_items(
+                    brain.getObject(), tile_items, aggregate=False
+                )
+                # case multi level folder structure
+                if len(tile_items) > count + 1:
+                    del tile_items[count + 1 :]
                 else:
-                    count = len(tile_items)
-                    self.query_tile_items(
-                        brain.getObject(), tile_items, aggregate=False
-                    )
-                    # case multi level folder structure
-                    if len(tile_items) > count + 1:
-                        del tile_items[count + 1 :]
+                    tile_items.append(obj)
+
 
     def tile_item_context(self, tile_item):
         anchor = aq_inner(self.context)

@@ -5,6 +5,8 @@ Changelog
 0.9.dev0
 --------
 
+- Show empty Folders oder Folders without image in tiles listing [jensens]
+
 - Fix depreaction warnings in behaviors [jensens]
 
 - Fix Problem with Python 3 division (float instead of int) [jensens]
