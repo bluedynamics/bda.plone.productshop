@@ -90,7 +90,8 @@ class ProductView(BrowserView):
 
 
 FALLBACK_TILE_COLUMNS = 4
-
+FOLDER_TYPES = ["Folder"]
+PRODUCT_TYPES = ["bda.plone.productshop.productgroup", "bda.plone.productshop.product"]
 
 class ProductTiles(BrowserView):
     def __init__(self, context, request):
@@ -107,18 +108,18 @@ class ProductTiles(BrowserView):
             brains = [brain for brain in brains]
             shuffle(brains)
         for brain in brains:
-            if (
-                brain.portal_type == "bda.plone.productshop.productgroup"
-                or brain.portal_type == "bda.plone.productshop.product"
-            ):
+            if brain.portal_type in PRODUCT_TYPES:
                 tile_items.append(brain.getObject())
                 if not aggregate:
                     return
-            elif brain.portal_type == "Folder":
+                continue
+            if brain.portal_type in FOLDER_TYPES:
                 obj = brain.getObject()
-                if ILeadImage.providedBy(obj) and ILeadImage(obj).image:
+                if ILeadImage.providedBy(obj):
                     tile_items.append(obj)
                     continue
+
+                # look for first item in Folder
                 count = len(tile_items)
                 self.query_tile_items(
                     brain.getObject(), tile_items, aggregate=False
