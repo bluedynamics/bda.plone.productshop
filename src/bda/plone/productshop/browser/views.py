@@ -97,7 +97,7 @@ class ProductTiles(BrowserView):
         super(ProductTiles, self).__init__(context, request)
         registry = getUtility(IRegistry)
         self.settings = registry.forInterface(IProductShopSettings)
-        self.tile_bootstrap_column_classes = "col-xs-12 col-sm-6 col-md-{}".format(
+        self.tile_bootstrap_column_classes = "col-xs-12 col-sm-6 col-md-4 col-lg-{}".format(
             int(12 / self.tile_columns) or 1
         )
 
