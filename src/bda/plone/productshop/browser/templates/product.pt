@@ -11,17 +11,13 @@
                  manual view/manual;
                  datasheet view/datasheet;
                  related_items view/related_items">
-  <span tal:attributes="ajax:target context/absolute_url">
+  <span tal:condition="image"
+        tal:attributes="ajax:target context/absolute_url">
     <img src=""
          alt=""
          class="product_image product_image_uploaded"
          tal:condition="image"
          tal:replace="structure image" />
-
-    <img src="++resource++dummy_product.jpg"
-         alt="product image product_image_dummy"
-         class="product_image"
-         tal:condition="not:image" />
   </span>
 
   <ul class="shopview_tabs">

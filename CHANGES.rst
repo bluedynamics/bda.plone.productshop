@@ -5,6 +5,9 @@ Changelog
 0.9.dev0
 --------
 
+- Remove dummy image from product view, only show image if uploaded.
+  [jensens]
+
 - Basic responsive tiles view using bootstrap classes [jensens]
 
 - Show empty Folders oder Folders without image in tiles listing [jensens]
