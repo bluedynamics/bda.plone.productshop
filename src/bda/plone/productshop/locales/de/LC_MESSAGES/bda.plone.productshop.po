@@ -393,7 +393,7 @@ msgstr "Kein Produkt mit den ausgewählten Kriterien gefunden. Ändern Sie die A
 #. Default: "Sorry. No Products found."
 #: ./browser/templates/listing.pt:19
 msgid "no_products_found"
-msgstr "Entuldigen Sie bitte. Keine Produkte mit den ausgewählten Kriterien gefunden"
+msgstr "Entschuldigen Sie bitte. Keine Produkte mit den ausgewählten Kriterien gefunden"
 
 #. Default: "Number of columns shown in product tiles view"
 #: ./behaviors.py:53
