@@ -5,6 +5,9 @@ Changelog
 0.9.dev0
 --------
 
+- Edit icon in and edit on overlay in listing.
+  [jensens]
+
 - Remove dummy image from product view, only show image if uploaded.
   [jensens]
 

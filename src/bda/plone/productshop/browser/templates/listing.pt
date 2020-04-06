@@ -39,12 +39,21 @@
     </a>
 
     <div class="product_info">
-      <a href=""
-         class="product_link_title"
-         tal:attributes="href product/obj/absolute_url">
-        <h3 tal:content="product/obj/Title">Title</h3>
-      </a>
-      <p tal:content="product/obj/Description">Description</p>
+      <h3>
+        <a href="${python:product['obj'].absolute_url()}"
+           class="product_link_title">
+          ${python:product['obj'].Title()}
+        </a>
+        <a href="${python:view.edit_url(product['obj'])}"
+           tal:condition="python:view.can_edit(product['obj'])"
+           class="pat-plone-modal"
+           data-pat-plone-modal='{"actionOptions": {"timeout": 10000}}'
+           title="${python:product['obj'].Title()} bearbeiten"
+           aria-label="${python:product['obj'].Title()} bearbeiten">
+          <span class="icon-edit"></span>
+        </a>
+      </h3>
+      <p tal:content="python:product['obj'].Description()">Description</p>
       <a href=""
          class="product_link_more"
          tal:attributes="href product/obj/absolute_url"
