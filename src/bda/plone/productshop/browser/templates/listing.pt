@@ -9,12 +9,13 @@
      ajax:bind="render_product_listing batchclicked"
      tal:define="products view/products;
                  uid context/UID;
-                 css string:product_listing_${uid}"
+                 css string:product_listing_${uid};
+                 batch python:view.batch"
      tal:attributes="class string:product_listing productlistingsensitiv ${css};
                      ajax:target context/absolute_url;
                      ajax:action string:bda.plone.productshop.listing:.${css}:replace">
 
-  <tal:listingbatch replace="structure view/batch" />
+  <tal:listingbatch replace="structure batch" />
 
   <div class="no_products"
        tal:condition="not:products">
@@ -60,6 +61,6 @@
 
   </div>
 
-  <tal:listingbatch replace="structure view/batch" />
+  <tal:listingbatch replace="structure batch" />
 
 </div>

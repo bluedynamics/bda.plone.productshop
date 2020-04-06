@@ -22,6 +22,7 @@ from zope.component import getUtility
 from zope.i18nmessageid import MessageFactory
 
 import json
+import six
 
 
 _ = MessageFactory("bda.plone.productshop")
@@ -201,7 +202,7 @@ class ProductTiles(BrowserView):
             }
 
 
-LISTING_SLICESIZE = 10
+BATCH_SETTINGS = {'LISTING_SLICESIZE': 10}
 
 
 class ProductListingBatch(Batch):
@@ -214,7 +215,7 @@ class ProductListingBatch(Batch):
 
     @property
     def display(self):
-        return len(self.listing.result) > LISTING_SLICESIZE
+        return len(self.listing.result) > BATCH_SETTINGS['LISTING_SLICESIZE']
 
     @property
     def vocab(self):
@@ -234,7 +235,16 @@ class ProductListingBatch(Batch):
         for i in range(pages):
             params["b_page"] = str(i)
             query = "&".join(
-                ["{0}={1}".format(k, v.decode("utf-8")) for k, v in params.items()]
+                [
+                    "{0}={1}".format(
+                        k,
+                        v if isinstance(
+                            v,
+                            six.text_type
+                        ) else v.decode("utf-8"),
+                    )
+                    for k, v in params.items()
+                ]
             )
             url = "{0}?{1}".format(self.context.absolute_url(), query)
             ret.append(
@@ -250,8 +260,11 @@ class ProductListingBatch(Batch):
 
 class ProductListing(BrowserView):
     image_scale = "thumb"
-    slicesize = LISTING_SLICESIZE
     batch_params = []
+
+    @property
+    def slicesize(self):
+        return BATCH_SETTINGS['LISTING_SLICESIZE']
 
     @property
     def result(self):
