@@ -222,7 +222,7 @@ class ProductListingBatch(Batch):
         result = self.listing.result
         count = len(result)
         slicesize = self.listing.slicesize
-        pages = count / slicesize
+        pages = int(count / slicesize)
         if count % slicesize != 0:
             pages += 1
         current = self.request.get("b_page", "0")
