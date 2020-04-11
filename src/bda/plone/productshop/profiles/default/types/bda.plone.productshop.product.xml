@@ -32,7 +32,7 @@
     <element value="bda.shop.notificationtext.item" />
     <element value="bda.shop.notificationtext.global" />
     <element value="bda.shop.buyableperiod" />
-    <element value="bda.shop.buyableperiod" />
+    <element value="bda.shop.trading" />
 
     <!-- shop view related -->
     <element value="bda.productshop.excludefromnav" />
