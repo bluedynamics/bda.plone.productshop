@@ -5,6 +5,12 @@ Changelog
 0.9.dev0
 --------
 
+- Fix problem with AvailableVariantAspectsVocabulary not repescting named behaviors.
+  [jensens]
+
+- Fix some namings and DE translation.
+  [jensens]
+
 - Edit icon in and edit on overlay in listing.
   [jensens]
 

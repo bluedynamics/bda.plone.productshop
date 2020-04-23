@@ -47,9 +47,10 @@ class VariantAspectDefinition(object):
 
 
 def available_variant_aspects():
-    aspects = list()
-    for behavior in getUtilitiesFor(IBehavior):
-        interface = behavior[1].interface
-        if interface.isOrExtends(IVariantAspect):
-            aspects.append(VariantAspectDefinition(interface))
-    return aspects
+    aspects = dict()
+    for name, behavior in getUtilitiesFor(IBehavior):
+        if behavior.interface.isOrExtends(IVariantAspect):
+            aspects[behavior.interface] = VariantAspectDefinition(
+                behavior.interface
+            )
+    return aspects.values()
