@@ -103,7 +103,7 @@ msgid "Product for bda.plone.shop"
 msgstr "Produkt für bda.plone.shop"
 
 #: ./profiles/default/types/bda.plone.productshop.productgroup.xml
-msgid "Productgroup"
+msgid "Product Group"
 msgstr "Produktgruppe"
 
 #: ./profiles/default/types/bda.plone.productshop.productgroup.xml
@@ -258,7 +258,7 @@ msgstr "Aspekte"
 #. Default: "Color of the product"
 #: ./behaviors.py:140
 msgid "color_description"
-msgstr "Farbe des Produkts"
+msgstr "Farbe des Produktes"
 
 #. Default: "Color"
 #: ./behaviors.py:139
@@ -268,7 +268,7 @@ msgstr "Farbe"
 #. Default: "Datasheet of the product"
 #: ./behaviors.py:96
 msgid "datasheet_description"
-msgstr "Datenblatt vom Produkt"
+msgstr "Datenblatt des Produktes"
 
 #. Default: "Datasheet"
 #: ./behaviors.py:95
@@ -278,17 +278,17 @@ msgstr "Datenblatt"
 #. Default: "Variant aspects enabled by default when adding new variants"
 #: ./behaviors.py:113
 msgid "default_variant_aspects_description"
-msgstr "Standardmäßig aktivierte Aspekte beim hinzufügen von Varianten"
+msgstr "Standardmäßig aktivierte Aspekte beim Hinzufügen von Varianten"
 
 #. Default: "Default variant aspects"
 #: ./behaviors.py:111
 msgid "default_variant_aspects_title"
-msgstr "Standard Aspekte"
+msgstr "Standardaspekte der Variante"
 
 #. Default: "Demand of the product"
 #: ./behaviors.py:188
 msgid "demand_description"
-msgstr "Leistung vom Produkt"
+msgstr "Leistung des Produktes"
 
 #. Default: "Demand"
 #: ./behaviors.py:187
@@ -303,7 +303,7 @@ msgstr "Beschreibung"
 #. Default: "Details about the product"
 #: ./behaviors.py:90
 msgid "details_description"
-msgstr "Detailbeschreibung vom Produkt"
+msgstr "Detailbeschreibung des Produktes"
 
 #. Default: "Details"
 #: ./behaviors.py:89
@@ -328,7 +328,7 @@ msgstr "Aspekt ${aspect} zu Objekt hinzugefügt."
 #. Default: "Height of the product"
 #: ./behaviors.py:236
 msgid "height_description"
-msgstr "Höhe vom Produkt"
+msgstr "Höhe des Produktes"
 
 #. Default: "Height"
 #: ./behaviors.py:235
@@ -338,7 +338,7 @@ msgstr "Höhe"
 #. Default: "Preview image of Product"
 #: ./behaviors.py:84
 msgid "image_description"
-msgstr "Vorschaubild vom Produkt"
+msgstr "Vorschaubild des Produktes"
 
 #. Default: "Product Image"
 #: ./behaviors.py:83
@@ -358,7 +358,7 @@ msgstr "IP Code"
 #. Default: "Length of the product"
 #: ./behaviors.py:204
 msgid "length_description"
-msgstr "Länge vom Produkt"
+msgstr "Länge des Produktes"
 
 #. Default: "Length"
 #: ./behaviors.py:203
@@ -378,7 +378,7 @@ msgstr "Handbuch"
 #. Default: "Material of the product"
 #: ./behaviors.py:284
 msgid "material_description"
-msgstr "Material vom Produkt"
+msgstr "Material des Produktes"
 
 #. Default: "Material"
 #: ./behaviors.py:283
@@ -411,7 +411,7 @@ msgstr "Kachelansicht Spalten"
 #: ./behaviors.py:60
 #: ./interfaces.py:68
 msgid "product_tiles_view_image_scale_description"
-msgstr "Bild Skalierung welche für die Kachelansicht verwendet wird"
+msgstr "Für die Kachelansicht verwendet Bildskalierung"
 
 #. Default: "Product tiles image scale"
 #: ./behaviors.py:58
@@ -437,7 +437,7 @@ msgstr "Verwandte Produkte"
 #. Default: "reset filter"
 #: ./browser/templates/aspects.pt:40
 msgid "reset_filter"
-msgstr "setzen Sie die Kriterien zurück"
+msgstr "Filter zurück setzen"
 
 #. Default: "Size of the product"
 #: ./behaviors.py:172
@@ -455,8 +455,8 @@ msgid "specifications"
 msgstr "Spezifikationen"
 
 #: ./profiles/default/types/bda.plone.productshop.variant.xml
-msgid "variant"
-msgstr "Variante"
+msgid "Product Variant"
+msgstr "Produkt Variante"
 
 #: ./profiles/default/types/bda.plone.productshop.variant.xml
 msgid "variant to use within a Productgroup"
@@ -465,7 +465,7 @@ msgstr "Variante einer Produktgruppe"
 #. Default: "Weight of the product"
 #: ./behaviors.py:156
 msgid "weight_description"
-msgstr "Gewicht vom Produkt"
+msgstr "Gewicht des Produktes"
 
 #. Default: "Weight"
 #: ./behaviors.py:155
@@ -475,7 +475,7 @@ msgstr "Gewicht"
 #. Default: "Width of the product"
 #: ./behaviors.py:220
 msgid "width_description"
-msgstr "Breite vom Produkt"
+msgstr "Breite des Produktes"
 
 #. Default: "Width"
 #: ./behaviors.py:219

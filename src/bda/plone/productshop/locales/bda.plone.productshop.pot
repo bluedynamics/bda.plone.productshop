@@ -106,7 +106,7 @@ msgid "Product for bda.plone.shop"
 msgstr ""
 
 #: ./profiles/default/types/bda.plone.productshop.productgroup.xml
-msgid "Productgroup"
+msgid "Product Group"
 msgstr ""
 
 #: ./profiles/default/types/bda.plone.productshop.productgroup.xml
@@ -458,7 +458,7 @@ msgid "specifications"
 msgstr ""
 
 #: ./profiles/default/types/bda.plone.productshop.variant.xml
-msgid "variant"
+msgid "Product Variant"
 msgstr ""
 
 #: ./profiles/default/types/bda.plone.productshop.variant.xml

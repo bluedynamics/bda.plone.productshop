@@ -5,7 +5,7 @@
         xmlns:i18n="http://xml.zope.org/namespaces/i18n">
 
   <!-- Basic metadata -->
-  <property name="title" i18n:translate="">variant</property>
+  <property name="title" i18n:translate="">Product Variant</property>
   <property name="description"
     i18n:translate="">variant to use within a Productgroup</property>
   <property name="icon_expr">string:${portal_url}/++resource++product.png</property>

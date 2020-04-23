@@ -4,7 +4,7 @@
         i18n:domain="bda.plone.productshop" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
 
   <!-- Basic metadata -->
-  <property name="title" i18n:translate="">Productgroup</property>
+  <property name="title" i18n:translate="">Product Group</property>
   <property name="description"
     i18n:translate="">Productgroup to hold variations</property>
   <property name="icon_expr">string:${portal_url}/++resource++products.png</property>
