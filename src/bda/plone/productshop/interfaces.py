@@ -23,7 +23,7 @@ class IProductShopExtensionLayer(Interface):
 ##############################################################################
 
 
-class IProduct(Interface, IImageScaleTraversable):
+class IProduct(Interface):
     """Marker interface for product content.
     """
 
