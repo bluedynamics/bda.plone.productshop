@@ -89,21 +89,9 @@ class IProductManualBehavior(model.Schema):
 
 
 @provider(IFormFieldProvider)
-class IProductBehavior(model.Schema):
-    """Product behavior.
+class IProductDatasheetBehavior(model.Schema):
+    """Product datasheet behavior.
     """
-
-    image = NamedBlobImage(
-        title=_(u"image_title", default=u"Product Image"),
-        description=_(u"image_description", default=u"Preview image of Product"),
-        required=False,
-    )
-
-    details = RichText(
-        title=_(u"details_title", default=u"Details"),
-        description=_(u"details_description", default=u"Details about the product"),
-        required=False,
-    )
 
     datasheet = RichText(
         title=_(u"datasheet_title", default=u"Datasheet"),
@@ -111,6 +99,19 @@ class IProductBehavior(model.Schema):
         required=False,
     )
 
+@provider(IFormFieldProvider)
+class IProductDetailsBehavior(model.Schema):
+    """Product details behavior.
+    """
+
+    details = RichText(
+        title=_(u"details_title", default=u"Details"),
+        description=_(u"details_description", default=u"Details about the product"),
+        required=False,
+    )
+
+# bbb
+IProductBehavior = IProductDetailsBehavior
 
 @provider(IFormFieldProvider)
 class IProductGroupBehavior(IProductBehavior):
