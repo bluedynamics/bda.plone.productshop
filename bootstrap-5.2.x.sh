@@ -1,8 +1,8 @@
 #!/bin/sh
 rm -r ./lib ./include ./local ./bin
-ln -fs plone-5.1.x.cfg buildout.cfg
+ln -fs plone-5.2.x.cfg buildout.cfg
 python3 -mvenv .
 ./bin/pip -U pip
-./bin/pip install -r requirements.cfg 
+./bin/pip install -r requirements.cfg
 ./bin/buildout
 
