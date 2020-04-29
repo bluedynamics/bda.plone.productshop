@@ -164,8 +164,6 @@ class ProductTiles(BrowserView):
     def tiles(self):
         tile_items = []
         self.query_tile_items(self.context, tile_items)
-        ret = list()
-        index = 0
         sm = getSecurityManager()
         for tile_item in tile_items:
             item_context = self.tile_item_context(tile_item)
