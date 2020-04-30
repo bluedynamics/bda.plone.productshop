@@ -50,7 +50,5 @@ def available_variant_aspects():
     aspects = dict()
     for name, behavior in getUtilitiesFor(IBehavior):
         if behavior.interface.isOrExtends(IVariantAspect):
-            aspects[behavior.interface] = VariantAspectDefinition(
-                behavior.interface
-            )
+            aspects[behavior.interface] = VariantAspectDefinition(behavior.interface)
     return aspects.values()
