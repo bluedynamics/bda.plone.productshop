@@ -118,7 +118,11 @@ class IProductGroupBehavior(IProductBehavior):
     """Product group behavior.
     """
 
-    model.fieldset("settings", fields=["default_variant_aspects"])
+    model.fieldset(
+        "apects",
+        label=_(u"aspects", default=u"Aspects"), fields=["default_variant_aspects"]
+    )
+
 
     widget("default_variant_aspects", CheckBoxFieldWidget)
     default_variant_aspects = schema.List(
