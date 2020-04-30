@@ -28,3 +28,4 @@
 /.plone.versioncheck.*
 /pip-selfcheck.json
 /share/
+eggs
