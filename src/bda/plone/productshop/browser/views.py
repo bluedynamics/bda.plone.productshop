@@ -64,11 +64,13 @@ class ProductView(BrowserView):
 
     @property
     def details(self):
-        return self.context.details
+        if getattr(self.context, "datadetailsheet", None):
+            return self.context.details
 
     @property
     def datasheet(self):
-        return self.context.datasheet
+        if getattr(self.context, "datasheet", None):
+            return self.context.datasheet
 
     @property
     def manual(self):
@@ -464,15 +466,17 @@ class VariantView(ProductView, VariantBase):
 
     @property
     def details(self):
-        if self.context.details:
+        if getattr(self.context, "details", None):
             return self.context.details
-        return self.product_group.details
+        if getattr(self.product_group, "details", None):
+            return self.product_group.details
 
     @property
     def datasheet(self):
-        if self.context.datasheet:
+        if getattr(self.context, "datasheet", None):
             return self.context.datasheet
-        return self.product_group.datasheet
+        if getattr(self.product_group, "datasheet", None):
+            return self.product_group.datasheet
 
     @property
     def related_items(self):
