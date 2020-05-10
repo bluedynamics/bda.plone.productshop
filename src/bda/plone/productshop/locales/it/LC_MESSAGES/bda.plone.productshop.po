@@ -1,0 +1,615 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-05-10 10:10+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: ./profiles/default/actions.xml
+msgid "Add IP Code"
+msgstr "Aggiungi codice IP"
+
+#: ./profiles/default/actions.xml
+msgid "Add IP Code to product variant"
+msgstr "Aggiungi codice IP alla variante del prodotto"
+
+#: ./profiles/default/actions.xml
+msgid "Add angle"
+msgstr "Aggiungi angolo"
+
+#: ./profiles/default/actions.xml
+msgid "Add angle to product variant"
+msgstr "Aggiungi angolo alla variante del prodotto"
+
+#: ./profiles/default/actions.xml
+msgid "Add color"
+msgstr "Aggiungi colore"
+
+#: ./profiles/default/actions.xml
+msgid "Add color to product variant"
+msgstr "Aggiungi colore alla variante del prodotto"
+
+#: ./profiles/default/actions.xml
+msgid "Add demand"
+msgstr "Aggiungi richiesta"
+
+#: ./profiles/default/actions.xml
+msgid "Add demand to product variant"
+msgstr "Aggiungi richiesta alla variante del prodotto"
+
+#: ./profiles/default/actions.xml
+msgid "Add height"
+msgstr "Aggiungi altezza"
+
+#: ./profiles/default/actions.xml
+msgid "Add height to product variant"
+msgstr "Aggiungi altezza alla variante del prodotto"
+
+#: ./profiles/default/actions.xml
+msgid "Add length"
+msgstr "Aggiungi lunghezza"
+
+#: ./profiles/default/actions.xml
+msgid "Add length to product variant"
+msgstr "Aggiungi lunghezza alla variante del prodotto"
+
+#: ./profiles/default/actions.xml
+msgid "Add material"
+msgstr "Aggiungi materiale"
+
+#: ./profiles/default/actions.xml
+msgid "Add material to product variant"
+msgstr "Aggiungi materiale alla variante del prodotto"
+
+#: ./profiles/default/actions.xml
+msgid "Add size"
+msgstr "Aggiungi dimensione"
+
+#: ./profiles/default/actions.xml
+msgid "Add size to product variant"
+msgstr "Aggiungi dimensione alla variante del prodotto"
+
+#: ./profiles/default/actions.xml
+msgid "Add weight"
+msgstr "Aggiungi peso"
+
+#: ./profiles/default/actions.xml
+msgid "Add weight to product variant"
+msgstr "Aggiungi peso alla variante del prodotto"
+
+#: ./profiles/default/actions.xml
+msgid "Add width"
+msgstr "Aggiungi larghezza"
+
+#: ./profiles/default/actions.xml
+msgid "Add width to product variant"
+msgstr "Aggiungi larghezza alla variante del prodotto"
+
+#: ./configure.zcml:29
+msgid "Allow products to be excluded from navigation"
+msgstr "Permetti di escludere il prodotto dalla navigazione"
+
+#: ./configure.zcml:59
+msgid "Extend content being a variant."
+msgstr "Estendi il contenuto affinché diventi una variante"
+
+#: ./configure.zcml:113
+msgid "Extend content with angle."
+msgstr "Estendi il contenuto con un angle"
+
+#: ./configure.zcml:107
+msgid "Extend content with international protection code."
+msgstr "Estendi il contenuto con un codice IP"
+
+#: ./configure.zcml:119
+msgid "Extend content with material."
+msgstr "Estendi il contenuto con un materiale"
+
+#: ./configure.zcml:65
+msgid "Extend content with product color variant."
+msgstr "Estendi il contenuto con una variante di colore"
+
+#: ./configure.zcml:83
+msgid "Extend content with product demand."
+msgstr "Estendi il contenuto con una richiesta"
+
+#: ./configure.zcml:101
+msgid "Extend content with product height."
+msgstr "Estendi il contenuto con una variante di altezza"
+
+#: ./configure.zcml:89
+msgid "Extend content with product length."
+msgstr "Estendi il contenuto con una variante di lunghezza"
+
+#: ./configure.zcml:41
+msgid "Extend content with product manual file."
+msgstr "Estendi il contenuto con un manuale allegato"
+
+#: ./configure.zcml:77
+msgid "Extend content with product size."
+msgstr "Estendi il contenuto con una variante di dimensione"
+
+#: ./configure.zcml:47
+msgid "Extend content with product specific information."
+msgstr "Estendi il contenuto con informazioni specifiche"
+
+#: ./configure.zcml:35
+msgid "Extend content with product tiles view specific settings."
+msgstr "Estendi il contenuto con una vista contenente impostazioni specifiche"
+
+#: ./configure.zcml:71
+msgid "Extend content with product weight."
+msgstr "Estendi il contenuto con una variante di peso"
+
+#: ./configure.zcml:95
+msgid "Extend content with product width."
+msgstr "Estendi il contenuto con una variante di di larghezza"
+
+#: ./profiles/default/types/bda.plone.productshop.product.xml
+msgid "Product"
+msgstr "Prodotto"
+
+#: ./profiles/default/types/bda.plone.productshop.productgroup.xml
+msgid "Product Group"
+msgstr "Gruppo di prodotti"
+
+#: ./configure.zcml:29
+msgid "Product Shop: Exclude From navigation for products"
+msgstr "Product Shop: esculdi i prodotti dalla navigazione"
+
+#: ./configure.zcml:47
+msgid "Product Shop: Product"
+msgstr "Product Shop: Prodotto"
+
+#: ./configure.zcml:41
+msgid "Product Shop: Product Manual"
+msgstr "Product Shop: Manuale del prodotto"
+
+#: ./configure.zcml:35
+msgid "Product Shop: Product Tiles View Settings"
+msgstr "Product Shop: Vista impostazioni prodotto"
+
+#: ./configure.zcml:53
+msgid "Product Shop: Product group"
+msgstr "Product Shop: Gruppo di prodotti"
+
+#: ./configure.zcml:59
+msgid "Product Shop: Variant"
+msgstr "Product Shop: Variante"
+
+#: ./configure.zcml:113
+msgid "Product Shop: Variant Aspect Angle"
+msgstr "Product Shop: Variante di angolo"
+
+#: ./configure.zcml:65
+msgid "Product Shop: Variant Aspect Color"
+msgstr "Product Shop: Variante di colore"
+
+#: ./configure.zcml:83
+msgid "Product Shop: Variant Aspect Demand"
+msgstr "Product Shop: Variante di richiesta"
+
+#: ./configure.zcml:101
+msgid "Product Shop: Variant Aspect Height"
+msgstr "Product Shop: Variante di altezza"
+
+#: ./configure.zcml:107
+msgid "Product Shop: Variant Aspect IP Code"
+msgstr "Product Shop: Variante di codice IP"
+
+#: ./configure.zcml:89
+msgid "Product Shop: Variant Aspect Length"
+msgstr "Product Shop: Variante di lunghezza"
+
+#: ./configure.zcml:119
+msgid "Product Shop: Variant Aspect Material"
+msgstr "Product Shop: Variante di materiale"
+
+#: ./configure.zcml:77
+msgid "Product Shop: Variant Aspect Size"
+msgstr "Product Shop: Variante di dimensione"
+
+#: ./configure.zcml:71
+msgid "Product Shop: Variant Aspect Weight"
+msgstr "Product Shop: Variante di peso"
+
+#: ./configure.zcml:95
+msgid "Product Shop: Variant Aspect Width"
+msgstr "Product Shop: Variante di larghezza"
+
+#: ./profiles/default/types/bda.plone.productshop.variant.xml
+msgid "Product Variant"
+msgstr "Variante di prodotto"
+
+#: ./profiles/default/types/bda.plone.productshop.product.xml
+msgid "Product for bda.plone.shop"
+msgstr "Prodotto di bda.plone.shop"
+
+#: ./profiles.zcml:11
+msgid "Product shop extension for bda.plone.shop"
+msgstr "Estensione per negozio di prodotti bda.plone.shop"
+
+#: ./profiles/default/types/bda.plone.productshop.productgroup.xml
+msgid "Productgroup to hold variations"
+msgstr "Gruppo di prodoti per contenere varianti"
+
+#: ./profiles/default/actions.xml
+msgid "Remove IP Code"
+msgstr "Rimuovi codice IP"
+
+#: ./profiles/default/actions.xml
+msgid "Remove IP Code from product variant"
+msgstr "Rimuovi codice IP dalla variante di prodotto"
+
+#: ./profiles/default/actions.xml
+msgid "Remove angle"
+msgstr "Rimuovi angolo"
+
+#: ./profiles/default/actions.xml
+msgid "Remove angle from product variant"
+msgstr "Rimuovi angolo dalla variante di prodotto"
+
+#: ./profiles/default/actions.xml
+msgid "Remove color"
+msgstr "Rimuovi colore"
+
+#: ./profiles/default/actions.xml
+msgid "Remove color from product variant"
+msgstr "Rimuovi colore dalla variante di prodotto"
+
+#: ./profiles/default/actions.xml
+msgid "Remove demand"
+msgstr "Rimuovi richiesta"
+
+#: ./profiles/default/actions.xml
+msgid "Remove demand from product variant"
+msgstr "Rimuovi richiesta dalla variante di prodotto"
+
+#: ./profiles/default/actions.xml
+msgid "Remove height"
+msgstr "Rimuovi altezza"
+
+#: ./profiles/default/actions.xml
+msgid "Remove height from product variant"
+msgstr "Rimuovi altezza dalla variante di prodotto"
+
+#: ./profiles/default/actions.xml
+msgid "Remove length"
+msgstr "Rimuovi lunghezza"
+
+#: ./profiles/default/actions.xml
+msgid "Remove length from product variant"
+msgstr "Rimuovi lunghezza dalla variante di prodotto"
+
+#: ./profiles/default/actions.xml
+msgid "Remove material"
+msgstr "Rimuovi materiale"
+
+#: ./profiles/default/actions.xml
+msgid "Remove material from product variant"
+msgstr "Rimuovi materiale dalla variante di prodotto"
+
+#: ./profiles/default/actions.xml
+msgid "Remove size"
+msgstr "Rimuovi dimensione"
+
+#: ./profiles/default/actions.xml
+msgid "Remove size from product variant"
+msgstr "Rimuovi dimensione dalla variante di prodotto"
+
+#: ./profiles/default/actions.xml
+msgid "Remove weight"
+msgstr "Rimuovi peso prodotto"
+
+#: ./profiles/default/actions.xml
+msgid "Remove weight from product variant"
+msgstr "Rimuovi peso dalla variante di prodotto"
+
+#: ./profiles/default/actions.xml
+msgid "Remove width"
+msgstr "Rimuovi larghezza"
+
+#: ./profiles/default/actions.xml
+msgid "Remove width from product variant"
+msgstr "Rimuovi larghezza dalla variante di prodotto"
+
+#. Default: "Angle of the product"
+#: ./behaviors.py:277
+msgid "angle_description"
+msgstr "Angolo del prodotto"
+
+#. Default: "Angle"
+#: ./behaviors.py:276
+msgid "angle_title"
+msgstr "Angle"
+
+#. Default: "Angle"
+#: ./browser/actions.py:107
+msgid "aspect_angle"
+msgstr "Angle"
+
+#. Default: "Color"
+#: ./browser/actions.py:59
+msgid "aspect_color"
+msgstr "Colore"
+
+#. Default: "Demand"
+#: ./browser/actions.py:77
+msgid "aspect_demand"
+msgstr "Richiesta"
+
+#. Default: "Height"
+#: ./browser/actions.py:95
+msgid "aspect_height"
+msgstr "Altezza"
+
+#. Default: "IP Code"
+#: ./browser/actions.py:101
+msgid "aspect_ip_code"
+msgstr "Codice IP"
+
+#. Default: "Length"
+#: ./browser/actions.py:83
+msgid "aspect_length"
+msgstr "Lunghezza"
+
+#. Default: "Material"
+#: ./browser/actions.py:113
+msgid "aspect_material"
+msgstr "Materiale"
+
+#. Default: "Size"
+#: ./browser/actions.py:71
+msgid "aspect_size"
+msgstr "Dimensione"
+
+#. Default: "Weight"
+#: ./browser/actions.py:65
+msgid "aspect_weight"
+msgstr "Peso"
+
+#. Default: "Width"
+#: ./browser/actions.py:89
+msgid "aspect_width"
+msgstr "Larghezza"
+
+#. Default: "Aspects"
+#: ./behaviors.py:148
+msgid "aspects"
+msgstr "Aspetti"
+
+#: ./profiles.zcml:11
+msgid "bda.plone.productshop"
+msgstr "bda.plone.productshop"
+
+#. Default: "Color of the product"
+#: ./behaviors.py:152
+msgid "color_description"
+msgstr "Colore del prodotto"
+
+#. Default: "Color"
+#: ./behaviors.py:151
+msgid "color_title"
+msgstr "Colore"
+
+#. Default: "Datasheet of the product"
+#: ./behaviors.py:110
+msgid "datasheet_description"
+msgstr "Scheda dati del prodotto"
+
+#. Default: "Datasheet"
+#: ./behaviors.py:109
+msgid "datasheet_title"
+msgstr "Scheda dati"
+
+#. Default: "Variant aspects enabled by default when adding new variants"
+#: ./behaviors.py:125
+msgid "default_variant_aspects_description"
+msgstr "Varianti di aspetto abilitate in modo predefinito quando si aggiungono nuove varianti"
+
+#. Default: "Default variant aspects"
+#: ./behaviors.py:124
+msgid "default_variant_aspects_title"
+msgstr "Varianti di aspetto predefinite"
+
+#. Default: "Demand of the product"
+#: ./behaviors.py:198
+msgid "demand_description"
+msgstr "Rchieste del prodotto"
+
+#. Default: "Demand"
+#: ./behaviors.py:197
+msgid "demand_title"
+msgstr "Richieste"
+
+#. Default: "Description"
+#: ./browser/templates/product.pt:25
+msgid "description"
+msgstr "Descrizione"
+
+#. Default: "Details about the product"
+#: ./behaviors.py:104
+msgid "details_description"
+msgstr "Detagli del prodotto"
+
+#. Default: "Details"
+#: ./behaviors.py:103
+msgid "details_title"
+msgstr "Dettagli"
+
+#. Default: "Removed ${aspect} from object."
+#: ./browser/actions.py:41
+msgid "disabled_aspect"
+msgstr "Rimuovi ${aspect} dal prodotto."
+
+#. Default: "Download Manual"
+#: ./browser/templates/product.pt:43
+msgid "download_manual"
+msgstr "Scarica il manuale"
+
+#. Default: "Added ${aspect} to object."
+#: ./browser/actions.py:30
+msgid "enabled_aspect"
+msgstr "Aggiunto ${aspect} al prodotto."
+
+#. Default: "Height of the product"
+#: ./behaviors.py:244
+msgid "height_description"
+msgstr "Altezza del prodotto"
+
+#. Default: "Height"
+#: ./behaviors.py:243
+msgid "height_title"
+msgstr "Altezza"
+
+#. Default: "Preview image of Product"
+#: ./behaviors.py:98
+msgid "image_description"
+msgstr "Immagine di anteprima del prodotto"
+
+#. Default: "Product Image"
+#: ./behaviors.py:97
+msgid "image_title"
+msgstr "Immagine del prodotto"
+
+#. Default: "International protection code of the product"
+#: ./behaviors.py:260
+msgid "ip_code_description"
+msgstr "Codice IP del prodotto"
+
+#. Default: "IP Code"
+#: ./behaviors.py:259
+msgid "ip_code_title"
+msgstr "Codice IP"
+
+#. Default: "Length of the product"
+#: ./behaviors.py:214
+msgid "length_description"
+msgstr "Lunghezza del prodotto"
+
+#. Default: "Length"
+#: ./behaviors.py:213
+msgid "length_title"
+msgstr "Lunghezza"
+
+#. Default: "Manual of Product"
+#: ./behaviors.py:86
+msgid "manual_description"
+msgstr "Manuale del prodotto"
+
+#. Default: "Product Manual"
+#: ./behaviors.py:85
+msgid "manual_title"
+msgstr "Manuale"
+
+#. Default: "Material of the product"
+#: ./behaviors.py:293
+msgid "material_description"
+msgstr "Materiale del prodotto"
+
+#. Default: "Material"
+#: ./behaviors.py:292
+msgid "material_title"
+msgstr "Materiale"
+
+#. Default: "No product with selected criteria. Change selection or"
+#: ./browser/templates/aspects.pt:39
+msgid "no_product_by_criteria"
+msgstr "Nessun prodotto corrisponde ai criteri di selezione. Cambia criteri o"
+
+#. Default: "Sorry. No Products found."
+#: ./browser/templates/listing.pt:22
+msgid "no_products_found"
+msgstr "Ci dispiace! Non abbiamo trovato nessun prodotto."
+
+#. Default: "Number of columns shown in product tiles view"
+#: ./behaviors.py:58
+#: ./interfaces.py:66
+msgid "product_tiles_view_columns_description"
+msgstr "Numero di colonne mostrate nella vista riquadro del prodotto"
+
+#. Default: "Product tiles view Columns"
+#: ./behaviors.py:55
+#: ./interfaces.py:63
+msgid "product_tiles_view_columns_title"
+msgstr "Colonne mostrate nella vista riquadro prodotto"
+
+#. Default: "Image scale used for product tiles"
+#: ./behaviors.py:70
+#: ./interfaces.py:78
+msgid "product_tiles_view_image_scale_description"
+msgstr "Dimensione dellàimmagine mostrata nelle viste riquadro prodotto"
+
+#. Default: "Product tiles image scale"
+#: ./behaviors.py:66
+#: ./interfaces.py:74
+msgid "product_tiles_view_image_scale_title"
+msgstr "Dimensione immagine della vista riquadro prodotto"
+
+#. Default: "Products"
+#: ./interfaces.py:58
+msgid "products"
+msgstr "Prodotti"
+
+#. Default: "read more..."
+#: ./browser/templates/listing.pt:57
+msgid "read_more"
+msgstr "Leggi di più..."
+
+#. Default: "Related"
+#: ./browser/templates/product.pt:31
+msgid "related"
+msgstr "Correlati"
+
+#. Default: "reset filter"
+#: ./browser/templates/aspects.pt:42
+msgid "reset_filter"
+msgstr "rimuovi i filtri"
+
+#. Default: "Size of the product"
+#: ./behaviors.py:182
+msgid "size_description"
+msgstr "Dimensione del prodotto"
+
+#. Default: "Size"
+#: ./behaviors.py:181
+msgid "size_title"
+msgstr "Dimensione"
+
+#. Default: "Specifications"
+#: ./browser/templates/product.pt:28
+msgid "specifications"
+msgstr "Specifiche"
+
+#: ./profiles/default/types/bda.plone.productshop.variant.xml
+msgid "variant to use within a Productgroup"
+msgstr "variante to utilizzare in un gruppo di prodotti"
+
+#. Default: "Weight of the product"
+#: ./behaviors.py:168
+msgid "weight_description"
+msgstr "Peso del prodotto"
+
+#. Default: "Weight"
+#: ./behaviors.py:167
+msgid "weight_title"
+msgstr "Peso"
+
+#. Default: "Width of the product"
+#: ./behaviors.py:228
+msgid "width_description"
+msgstr "Larghezza del prodotto"
+
+#. Default: "Width"
+#: ./behaviors.py:227
+msgid "width_title"
+msgstr "Larghezza"
