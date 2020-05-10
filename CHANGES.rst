@@ -27,6 +27,9 @@ Changelog
 
 - Remove binding to CMFDefault skin in ZCML [jensens]
 
+-Added italian translations
+ [ale-rt]
+
 
 0.8
 ---
