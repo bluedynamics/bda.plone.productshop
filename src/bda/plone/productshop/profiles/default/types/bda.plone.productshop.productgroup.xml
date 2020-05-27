@@ -33,7 +33,7 @@
     <!-- shop view related -->
     <element value="plone.leadimage" />
     <element value="bda.productshop.excludefromnav" />
-    <element value="bda.plone.productshop.behaviors.IProductGroupBehavior" />
+    <element value="bda.productshop.productgroup" />
     <element value="plone.relateditems" />
   </property>
 
