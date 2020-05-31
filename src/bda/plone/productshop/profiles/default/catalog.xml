@@ -4,41 +4,51 @@
   <index name="color_aspect" meta_type="FieldIndex">
     <indexed_attr value="color_aspect" />
   </index>
+  <column value="color_aspect"/>
 
   <index name="weight_aspect" meta_type="FieldIndex">
     <indexed_attr value="weight_aspect" />
   </index>
+  <column value="weight_aspect"/>
 
   <index name="size_aspect" meta_type="FieldIndex">
     <indexed_attr value="size_aspect" />
   </index>
+  <column value="size_aspect"/>
 
   <index name="demand_aspect" meta_type="FieldIndex">
     <indexed_attr value="demand_aspect" />
   </index>
+  <column value="demand_aspect"/>
 
   <index name="length_aspect" meta_type="FieldIndex">
     <indexed_attr value="length_aspect" />
   </index>
+  <column value="length_aspect"/>
 
   <index name="width_aspect" meta_type="FieldIndex">
     <indexed_attr value="width_aspect" />
   </index>
+  <column value="width_aspect"/>
 
   <index name="height_aspect" meta_type="FieldIndex">
     <indexed_attr value="height_aspect" />
   </index>
+  <column value="height_aspect"/>
 
   <index name="ip_code_aspect" meta_type="FieldIndex">
     <indexed_attr value="ip_code_aspect" />
   </index>
+  <column value="ip_code_aspect"/>
 
   <index name="angle_aspect" meta_type="FieldIndex">
     <indexed_attr value="angle_aspect" />
   </index>
+  <column value="angle_aspect"/>
 
   <index name="material_aspect" meta_type="FieldIndex">
     <indexed_attr value="material_aspect" />
   </index>
+  <column value="material_aspect"/>
 
 </object>
