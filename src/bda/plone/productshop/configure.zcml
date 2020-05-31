@@ -21,6 +21,14 @@
     component=".vocabularies.AvailableVariantAspectsVocabulary"
     name="bda.plone.productshop.AvailableVariantAspectsVocabulary" />
 
+  <utility
+    component=".vocabularies.SizeAspectVocabularyFactory"
+    name="bda.plone.productshop.sizeaspects" />
+
+  <utility
+    component=".vocabularies.MateriaAspectVocabularyFactory"
+    name="bda.plone.productshop.materialaspects" />
+
   <!-- DX behaviors -->
   <plone:behavior
     name="bda.productshop.excludefromnav"
