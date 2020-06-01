@@ -375,7 +375,9 @@ class Aspects(BrowserView):
         ret = set()
         for variant in self.variants:
             value = self.variant_value(definition, variant)
-            if value:
+            if value and isinstance(value, (list, tuple)):
+                ret.update(value)
+            elif value:
                 ret.add(value)
         return ret
 
