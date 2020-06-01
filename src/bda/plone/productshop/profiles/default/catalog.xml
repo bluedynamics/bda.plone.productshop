@@ -11,7 +11,7 @@
   </index>
   <column value="weight_aspect"/>
 
-  <index name="size_aspect" meta_type="FieldIndex">
+  <index name="size_aspect" meta_type="KeywordIndex">
     <indexed_attr value="size_aspect" />
   </index>
   <column value="size_aspect"/>
@@ -46,7 +46,7 @@
   </index>
   <column value="angle_aspect"/>
 
-  <index name="material_aspect" meta_type="FieldIndex">
+  <index name="material_aspect" meta_type="KeywordIndex">
     <indexed_attr value="material_aspect" />
   </index>
   <column value="material_aspect"/>
