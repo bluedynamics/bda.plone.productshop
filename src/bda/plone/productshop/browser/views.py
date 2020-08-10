@@ -98,6 +98,7 @@ FALLBACK_TILE_COLUMNS = 4
 FOLDER_TYPES = ["Folder"]
 PRODUCT_TYPES = ["bda.plone.productshop.productgroup", "bda.plone.productshop.product"]
 
+
 class ProductTiles(BrowserView):
     def __init__(self, context, request):
         super(ProductTiles, self).__init__(context, request)
@@ -126,15 +127,12 @@ class ProductTiles(BrowserView):
 
                 # look for first item in Folder
                 count = len(tile_items)
-                self.query_tile_items(
-                    brain.getObject(), tile_items, aggregate=False
-                )
+                self.query_tile_items(brain.getObject(), tile_items, aggregate=False)
                 # case multi level folder structure
                 if len(tile_items) > count + 1:
                     del tile_items[count + 1 :]
                 else:
                     tile_items.append(obj)
-
 
     def tile_item_context(self, tile_item):
         anchor = aq_inner(self.context)
@@ -168,8 +166,6 @@ class ProductTiles(BrowserView):
     def tiles(self):
         tile_items = []
         self.query_tile_items(self.context, tile_items)
-        ret = list()
-        index = 0
         sm = getSecurityManager()
         for tile_item in tile_items:
             item_context = self.tile_item_context(tile_item)
@@ -206,7 +202,7 @@ class ProductTiles(BrowserView):
             }
 
 
-BATCH_SETTINGS = {'LISTING_SLICESIZE': 10}
+BATCH_SETTINGS = {"LISTING_SLICESIZE": 10}
 
 
 class ProductListingBatch(Batch):
@@ -219,7 +215,7 @@ class ProductListingBatch(Batch):
 
     @property
     def display(self):
-        return len(self.listing.result) > BATCH_SETTINGS['LISTING_SLICESIZE']
+        return len(self.listing.result) > BATCH_SETTINGS["LISTING_SLICESIZE"]
 
     @property
     def vocab(self):
@@ -241,11 +237,7 @@ class ProductListingBatch(Batch):
             query = "&".join(
                 [
                     "{0}={1}".format(
-                        k,
-                        v if isinstance(
-                            v,
-                            six.text_type
-                        ) else v.decode("utf-8"),
+                        k, v if isinstance(v, six.text_type) else v.decode("utf-8"),
                     )
                     for k, v in params.items()
                 ]
@@ -274,7 +266,7 @@ class ProductListing(BrowserView):
 
     @property
     def slicesize(self):
-        return BATCH_SETTINGS['LISTING_SLICESIZE']
+        return BATCH_SETTINGS["LISTING_SLICESIZE"]
 
     @property
     def result(self):
@@ -321,7 +313,7 @@ class AspectsExtraction(object):
             key = definition.attribute
             value = self.request.get(key)
             if value and value != "UNSET":
-                if isinstance(value, six.binary_type):
+                if six.PY2:
                     criteria["{0}_aspect".format(key)] = value.decode("utf-8")
                 else:
                     criteria["{0}_aspect".format(key)] = value
@@ -385,7 +377,9 @@ class Aspects(BrowserView):
         ret = set()
         for variant in self.variants:
             value = self.variant_value(definition, variant)
-            if value:
+            if value and isinstance(value, (list, tuple)):
+                ret.update(value)
+            elif value:
                 ret.add(value)
         return ret
 

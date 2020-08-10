@@ -5,24 +5,25 @@
      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
      xmlns:ajax="http://namesspaces.bluedynamics.eu/ajax"
      i18n:domain="bda.plone.productshop"
-     class="variant_aspects"
+     class="variant_aspects form-row"
      ajax:bind="reset_aspects"
      tal:define="aspects view/aspects;
                  uid context/UID;
                  css string:variant_aspects_${uid}"
      tal:condition="aspects"
-     tal:attributes="class string:variant_aspects ${css};
+     tal:attributes="class string:form-row variant_aspects ${css};
                      data-uid uid;
                      data-scope view/scope;
                      ajax:target context/absolute_url;
                      ajax:action string:bda.plone.productshop.aspects:.${css}:replace">
 
-  <div class="aspect" tal:repeat="aspect aspects">
+  <div class="aspect input-group input-group-sm mb-3 mr-2" tal:repeat="aspect aspects">
 
-    <strong tal:content="aspect/title">Aspect</strong>
+    <div class="input-group-prepend">
+      <label class="input-group-text" tal:content="aspect/title">Aspect</label>
+    </div>
 
-    <select tal:attributes="name aspect/name;
-                            class aspect/name">
+    <select class="${aspect/name} custom-select custom-select-sm" tal:attributes="name aspect/name;">
       <tal:option repeat="option aspect/options">
         <option tal:content="option/title"
                 tal:attributes="value option/value;
