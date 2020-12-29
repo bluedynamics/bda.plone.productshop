@@ -26,6 +26,8 @@ from zope.i18nmessageid import MessageFactory
 import json
 import six
 
+SORT_VARIANTS_ON = "getObjPositionInParent"
+SORT_VARIANTS_ORDER = "ascending"
 
 _ = MessageFactory("bda.plone.productshop")
 
@@ -34,7 +36,8 @@ def query_children(context, criteria=dict()):
     cat = getToolByName(context, "portal_catalog")
     query = {
         "path": {"query": "/".join(context.getPhysicalPath()), "depth": 1,},
-        "sort_on": "getObjPositionInParent",
+        "sort_on": SORT_VARIANTS_ON,
+        "sort_order": SORT_VARIANTS_ORDER,
     }
     query.update(criteria)
     return cat(**query)
