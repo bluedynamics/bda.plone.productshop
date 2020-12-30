@@ -311,7 +311,10 @@ class AspectsExtraction(object):
             key = definition.attribute
             value = self.request.get(key)
             if value and value != "UNSET":
-                criteria["{0}_aspect".format(key)] = value.decode("utf-8")
+                if six.PY2:
+                    criteria["{0}_aspect".format(key)] = value.decode("utf-8")
+                else:
+                    criteria["{0}_aspect".format(key)] = value
         return criteria
 
 
