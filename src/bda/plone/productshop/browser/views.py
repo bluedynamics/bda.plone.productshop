@@ -67,7 +67,7 @@ class ProductView(BrowserView):
 
     @property
     def details(self):
-        if getattr(self.context, "datadetailsheet", None):
+        if getattr(self.context, "details", None):
             return self.context.details
 
     @property
