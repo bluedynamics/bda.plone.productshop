@@ -35,7 +35,6 @@
     <element value="bda.shop.trading" />
 
     <!-- shop view related -->
-    <element value="bda.productshop.excludefromnav" />
     <element value="plone.richtext" />
     <element value="plone.leadimage" />
     <element value="bda.productshop.productdetails" />

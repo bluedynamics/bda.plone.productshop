@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<object name="bda.plone.productshop.productgroup"
+        meta_type="Dexterity FTI"
+        i18n:domain="bda.plone.productshop" 
+        xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+
+  <!-- Basic metadata -->
+  <property name="title" i18n:translate="">Product Group</property>
+
+  <property name="behaviors" purge="false">
+    <element value="bda.productshop.excludefromnav" remove="true" />
+  </property>
+
+</object>

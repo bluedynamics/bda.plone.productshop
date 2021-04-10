@@ -14,6 +14,7 @@
   <five:registerPackage package="." initialize=".initialize" />
 
   <include package=".browser" />
+  <include package=".upgrades" />
   <include file="profiles.zcml" />
 
   <!-- vocabularies -->
@@ -30,12 +31,6 @@
     name="bda.plone.productshop.materialaspects" />
 
   <!-- DX behaviors -->
-  <plone:behavior
-    name="bda.productshop.excludefromnav"
-    title="Product Shop: Exclude From navigation for products"
-    description="Allow products to be excluded from navigation"
-    provides=".behaviors.IProductExcludeFromNavigation" />
-
   <plone:behavior
     name="bda.productshop.tilesviewsettings"
     title="Product Shop: Product Tiles View Settings"
