@@ -14,7 +14,7 @@
 
     <genericsetup:upgradeDepends
       title="Load changed profiles: Remove bda.productshop.excludefromnav behavior"
-      import_profile="bda.plone.productshop:1000" />
+      import_profile="bda.plone.productshop.upgrades:1000" />
 
   </genericsetup:upgradeSteps>
 
