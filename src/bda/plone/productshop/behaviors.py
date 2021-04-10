@@ -19,25 +19,6 @@ _ = MessageFactory("bda.plone.productshop")
 
 
 @provider(IFormFieldProvider)
-class IProductExcludeFromNavigation(IExcludeFromNavigation):
-    """Exclude from navigation behavior for products.
-
-    Could not find a sane way of providing default values for general behavior
-    attributes based on content interface which the behavior is bound to.
-    Registering ComputedWidgetAttribute to context does not help because
-    context is the container in case of add form instead of a content instance.
-    """
-
-
-provideAdapter(
-    ComputedWidgetAttribute(
-        lambda data: True, field=IProductExcludeFromNavigation["exclude_from_nav"]
-    ),
-    name="default",
-)
-
-
-@provider(IFormFieldProvider)
 class IProductTilesViewSettingsBehavior(model.Schema):
     """Product tiles view settings behavior.
 

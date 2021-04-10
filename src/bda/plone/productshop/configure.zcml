@@ -31,12 +31,6 @@
 
   <!-- DX behaviors -->
   <plone:behavior
-    name="bda.productshop.excludefromnav"
-    title="Product Shop: Exclude From navigation for products"
-    description="Allow products to be excluded from navigation"
-    provides=".behaviors.IProductExcludeFromNavigation" />
-
-  <plone:behavior
     name="bda.productshop.tilesviewsettings"
     title="Product Shop: Product Tiles View Settings"
     description="Extend content with product tiles view specific settings."
