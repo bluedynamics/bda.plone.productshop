@@ -7,7 +7,7 @@
   <property name="title" i18n:translate="">Product Group</property>
   <property name="description"
     i18n:translate="">Productgroup to hold variations</property>
-  <property name="icon_expr">string:${portal_url}/++resource++products.png</property>
+  <property name="icon_expr">string:layers</property>
   <property name="factory">bda.plone.productshop.productgroup</property>
   <property name="global_allow">True</property>
   <property name="filter_content_types">True</property>

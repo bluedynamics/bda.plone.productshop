@@ -8,7 +8,7 @@
   <property name="title" i18n:translate="">Product Variant</property>
   <property name="description"
     i18n:translate="">variant to use within a Productgroup</property>
-  <property name="icon_expr">string:${portal_url}/++resource++product.png</property>
+  <property name="icon_expr">string:layers-half</property>
   <property name="factory">bda.plone.productshop.variant</property>
   <property name="global_allow">False</property>
   <property name="filter_content_types">False</property>
