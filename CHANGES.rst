@@ -30,6 +30,10 @@ Changelog
 - fix condition for `details` richtext
   [petschki]
 
+-Added italian translations
+ [ale-rt]
+
+
 0.8
 ---
 
