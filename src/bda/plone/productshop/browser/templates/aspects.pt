@@ -5,32 +5,33 @@
      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
      xmlns:ajax="http://namesspaces.bluedynamics.eu/ajax"
      i18n:domain="bda.plone.productshop"
-     class="variant_aspects"
+     class="variant_aspects form-row"
      ajax:bind="reset_aspects"
      tal:define="aspects view/aspects;
                  uid context/UID;
                  css string:variant_aspects_${uid}"
      tal:condition="aspects"
-     tal:attributes="class string:variant_aspects ${css};
+     tal:attributes="class string:row row-cols-auto g-0 align-items-center variant_aspects ${css};
                      data-uid uid;
                      data-scope view/scope;
                      ajax:target context/absolute_url;
                      ajax:action string:bda.plone.productshop.aspects:.${css}:replace">
 
-  <div class="aspect" tal:repeat="aspect aspects">
+  <div class="aspect mb-3 me-2" tal:repeat="aspect aspects">
 
-    <strong tal:content="aspect/title">Aspect</strong>
-
-    <select tal:attributes="name aspect/name;
-                            class aspect/name">
-      <tal:option repeat="option aspect/options">
-        <option tal:content="option/title"
-                tal:attributes="value option/value;
-                                selected python:option['selected'] and 'selected' or None">
-          Option
-        </option>
-      </tal:option>
-    </select>
+    <div class="input-group input-group-sm">
+      <label class="input-group-text" tal:content="aspect/title">Aspect</label>
+      
+      <select class="${aspect/name} form-select form-select-sm" tal:attributes="name aspect/name;">
+        <tal:option repeat="option aspect/options">
+          <option tal:content="option/title"
+            tal:attributes="value option/value;
+            selected python:option['selected'] and 'selected' or None">
+            Option
+          </option>
+        </tal:option>
+      </select>
+    </div>
 
   </div>
 

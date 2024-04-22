@@ -25,16 +25,6 @@
     file="resources/productshop.js" />
 
   <browser:resource
-    name="product.png"
-    file="resources/product.png"
-    layer="..interfaces.IProductShopExtensionLayer" />
-
-  <browser:resource
-    name="products.png"
-    file="resources/products.png"
-    layer="..interfaces.IProductShopExtensionLayer" />
-
-  <browser:resource
     name="dummy_product.jpg"
     file="resources/dummy_product.jpg"
     layer="..interfaces.IProductShopExtensionLayer" />

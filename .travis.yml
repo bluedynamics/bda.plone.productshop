@@ -21,12 +21,11 @@ matrix:
 before_install:
   - sudo apt-get install -y firefox-geckodriver
   - virtualenv -p `which python` .
-  - bin/pip install -r requirements.txt -c constraints_plone$PLONE_VERSION.txt
-  - test_plone$PLONE_VERSION.cfg buildout.cfg
+  - bin/pip install -r requirements.txt -c constraints_plone-$PLONE_VERSION.txt
 
 install:
-  - bin/buildout -N -t 3 code-analysis:return-status-codes=True annotate
-  - bin/buildout -N -t 3 code-analysis:return-status-codes=True
+  - bin/buildout -c plone-$PLONE_VERSION.cfg -N -t 3 code-analysis:return-status-codes=True annotate
+  - bin/buildout -c plone-$PLONE_VERSION.cfg -N -t 3 code-analysis:return-status-codes=True
 
 before_script:
 - 'export DISPLAY=:99.0'

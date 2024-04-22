@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<object name="bda.plone.productshop.productgroup"
+        meta_type="Dexterity FTI"
+        i18n:domain="bda.plone.productshop"
+        xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+
+  <!-- Basic metadata -->
+  <property name="title" i18n:translate="">Product Group</property>
+  <property name="icon_expr">string:layers</property>
+
+  <property name="behaviors" purge="false">
+    <element value="bda.productshop.excludefromnav" remove="true" />
+  </property>
+
+  <!-- Actions -->
+  <action title="View" action_id="view" category="object" condition_expr=""
+    url_expr="string:${object_url}/"
+    icon_expr="string:toolbar-action/view" visible="True">
+    <permission value="View" />
+  </action>
+  <action title="Edit" action_id="edit" category="object" condition_expr=""
+    url_expr="string:${object_url}/edit"
+    icon_expr="string:toolbar-action/edit" visible="True">
+    <permission value="Modify portal content" />
+  </action>
+</object>

@@ -26,6 +26,8 @@ from zope.i18nmessageid import MessageFactory
 import json
 import six
 
+SORT_VARIANTS_ON = "getObjPositionInParent"
+SORT_VARIANTS_ORDER = "ascending"
 
 _ = MessageFactory("bda.plone.productshop")
 
@@ -34,7 +36,8 @@ def query_children(context, criteria=dict()):
     cat = getToolByName(context, "portal_catalog")
     query = {
         "path": {"query": "/".join(context.getPhysicalPath()), "depth": 1,},
-        "sort_on": "getObjPositionInParent",
+        "sort_on": SORT_VARIANTS_ON,
+        "sort_order": SORT_VARIANTS_ORDER,
     }
     query.update(criteria)
     return cat(**query)
@@ -64,11 +67,13 @@ class ProductView(BrowserView):
 
     @property
     def details(self):
-        return self.context.details
+        if getattr(self.context, "details", None):
+            return self.context.details
 
     @property
     def datasheet(self):
-        return self.context.datasheet
+        if getattr(self.context, "datasheet", None):
+            return self.context.datasheet
 
     @property
     def manual(self):
@@ -375,7 +380,9 @@ class Aspects(BrowserView):
         ret = set()
         for variant in self.variants:
             value = self.variant_value(definition, variant)
-            if value:
+            if value and isinstance(value, (list, tuple)):
+                ret.update(value)
+            elif value:
                 ret.add(value)
         return ret
 
@@ -459,15 +466,17 @@ class VariantView(ProductView, VariantBase):
 
     @property
     def details(self):
-        if self.context.details:
+        if getattr(self.context, "details", None):
             return self.context.details
-        return self.product_group.details
+        if getattr(self.product_group, "details", None):
+            return self.product_group.details
 
     @property
     def datasheet(self):
-        if self.context.datasheet:
+        if getattr(self.context, "datasheet", None):
             return self.context.datasheet
-        return self.product_group.datasheet
+        if getattr(self.product_group, "datasheet", None):
+            return self.product_group.datasheet
 
     @property
     def related_items(self):

@@ -1,0 +1,21 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+  xmlns:genericsetup="http://namespaces.zope.org/genericsetup">
+
+  <genericsetup:registerProfile name="1000"
+    title="Update profile to 1000"
+    description=''
+    directory="1000"
+    for="Products.CMFPlone.interfaces.IMigratingPloneSiteRoot"
+    provides="Products.GenericSetup.interfaces.EXTENSION" />
+
+  <genericsetup:upgradeSteps source="*"
+    destination="1000"
+    profile="bda.plone.productshop:default">
+
+    <genericsetup:upgradeDepends
+      title="Load changed profiles: Remove bda.productshop.excludefromnav behavior"
+      import_profile="bda.plone.productshop.upgrades:1000" />
+
+  </genericsetup:upgradeSteps>
+
+</configure>

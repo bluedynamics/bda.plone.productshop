@@ -14,6 +14,7 @@
   <five:registerPackage package="." initialize=".initialize" />
 
   <include package=".browser" />
+  <include package=".upgrades" />
   <include file="profiles.zcml" />
 
   <!-- vocabularies -->
@@ -21,13 +22,15 @@
     component=".vocabularies.AvailableVariantAspectsVocabulary"
     name="bda.plone.productshop.AvailableVariantAspectsVocabulary" />
 
-  <!-- DX behaviors -->
-  <plone:behavior
-    name="bda.productshop.excludefromnav"
-    title="Product Shop: Exclude From navigation for products"
-    description="Allow products to be excluded from navigation"
-    provides=".behaviors.IProductExcludeFromNavigation" />
+  <utility
+    component=".vocabularies.SizeAspectVocabularyFactory"
+    name="bda.plone.productshop.sizeaspects" />
 
+  <utility
+    component=".vocabularies.MateriaAspectVocabularyFactory"
+    name="bda.plone.productshop.materialaspects" />
+
+  <!-- DX behaviors -->
   <plone:behavior
     name="bda.productshop.tilesviewsettings"
     title="Product Shop: Product Tiles View Settings"
@@ -41,10 +44,23 @@
     provides=".behaviors.IProductManualBehavior" />
 
   <plone:behavior
+    name="bda.productshop.productdatasheet"
+    title="Product Shop: Product Data Sheet"
+    description="Extend content with product datasheet text."
+    provides=".behaviors.IProductDatasheetBehavior" />
+
+  <plone:behavior
     name="bda.productshop.product"
-    title="Product Shop: Product"
-    description="Extend content with product specific information."
+    title="Product Shop: Product (DEPRECATED)"
+    name_only="true"
+    description="Deprecated: Extend content with product details text (same as bda.productshop.productdetails)."
     provides=".behaviors.IProductBehavior" />
+
+  <plone:behavior
+    name="bda.productshop.productdetails"
+    title="Product Shop: Product Details"
+    description="Extend content with product details text."
+    provides=".behaviors.IProductDetailsBehavior" />
 
   <plone:behavior
     name="bda.productshop.productgroup"

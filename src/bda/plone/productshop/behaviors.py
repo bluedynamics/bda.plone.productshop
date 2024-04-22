@@ -19,25 +19,6 @@ _ = MessageFactory("bda.plone.productshop")
 
 
 @provider(IFormFieldProvider)
-class IProductExcludeFromNavigation(IExcludeFromNavigation):
-    """Exclude from navigation behavior for products.
-
-    Could not find a sane way of providing default values for general behavior
-    attributes based on content interface which the behavior is bound to.
-    Registering ComputedWidgetAttribute to context does not help because
-    context is the container in case of add form instead of a content instance.
-    """
-
-
-provideAdapter(
-    ComputedWidgetAttribute(
-        lambda data: True, field=IProductExcludeFromNavigation["exclude_from_nav"]
-    ),
-    name="default",
-)
-
-
-@provider(IFormFieldProvider)
 class IProductTilesViewSettingsBehavior(model.Schema):
     """Product tiles view settings behavior.
 
@@ -89,21 +70,9 @@ class IProductManualBehavior(model.Schema):
 
 
 @provider(IFormFieldProvider)
-class IProductBehavior(model.Schema):
-    """Product behavior.
+class IProductDatasheetBehavior(model.Schema):
+    """Product datasheet behavior.
     """
-
-    image = NamedBlobImage(
-        title=_(u"image_title", default=u"Product Image"),
-        description=_(u"image_description", default=u"Preview image of Product"),
-        required=False,
-    )
-
-    details = RichText(
-        title=_(u"details_title", default=u"Details"),
-        description=_(u"details_description", default=u"Details about the product"),
-        required=False,
-    )
 
     datasheet = RichText(
         title=_(u"datasheet_title", default=u"Datasheet"),
@@ -111,13 +80,30 @@ class IProductBehavior(model.Schema):
         required=False,
     )
 
+@provider(IFormFieldProvider)
+class IProductDetailsBehavior(model.Schema):
+    """Product details behavior.
+    """
+
+    details = RichText(
+        title=_(u"details_title", default=u"Details"),
+        description=_(u"details_description", default=u"Details about the product"),
+        required=False,
+    )
+
+# bbb
+IProductBehavior = IProductDetailsBehavior
 
 @provider(IFormFieldProvider)
 class IProductGroupBehavior(IProductBehavior):
     """Product group behavior.
     """
 
-    model.fieldset("settings", fields=["default_variant_aspects"])
+    model.fieldset(
+        "apects",
+        label=_(u"aspects", default=u"Aspects"), fields=["default_variant_aspects"]
+    )
+
 
     widget("default_variant_aspects", CheckBoxFieldWidget)
     default_variant_aspects = schema.List(

@@ -7,7 +7,7 @@
   <property name="title" i18n:translate="">Product Group</property>
   <property name="description"
     i18n:translate="">Productgroup to hold variations</property>
-  <property name="icon_expr">string:${portal_url}/++resource++products.png</property>
+  <property name="icon_expr">string:layers</property>
   <property name="factory">bda.plone.productshop.productgroup</property>
   <property name="global_allow">True</property>
   <property name="filter_content_types">True</property>
@@ -31,8 +31,8 @@
     <element value="bda.shop.notificationtext.global" />
 
     <!-- shop view related -->
-    <element value="bda.productshop.excludefromnav" />
-    <element value="bda.plone.productshop.behaviors.IProductGroupBehavior" />
+    <element value="plone.leadimage" />
+    <element value="bda.productshop.productgroup" />
     <element value="plone.relateditems" />
   </property>
 
@@ -55,11 +55,13 @@
 
   <!-- Actions -->
   <action title="View" action_id="view" category="object" condition_expr=""
-    url_expr="string:${object_url}/" visible="True">
+    url_expr="string:${object_url}/"
+    icon_expr="string:toolbar-action/view" visible="True">
     <permission value="View" />
   </action>
   <action title="Edit" action_id="edit" category="object" condition_expr=""
-    url_expr="string:${object_url}/edit" visible="True">
+    url_expr="string:${object_url}/edit"
+    icon_expr="string:toolbar-action/edit" visible="True">
     <permission value="Modify portal content" />
   </action>
 </object>

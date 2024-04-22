@@ -5,13 +5,17 @@
      i18n:domain="bda.plone.productshop"
      class="variant_view">
 
-  <div tal:replace="structure provider:plone.abovecontenttitle" />
+  <header>
 
-  <h1 class="documentFirstHeading" tal:content="context/Title">
-    Title
-  </h1>
+    <div tal:replace="structure provider:plone.abovecontenttitle" />
 
-  <div tal:replace="structure provider:plone.belowcontenttitle" />
+    <h1 class="documentFirstHeading" tal:content="context/Title">
+      Title
+    </h1>
+
+    <div tal:replace="structure provider:plone.belowcontenttitle" />
+
+  </header>
 
   <tal:aspects replace="structure context/@@bda.plone.productshop.aspects" />
 

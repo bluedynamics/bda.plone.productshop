@@ -27,6 +27,9 @@ Changelog
 
 - Remove binding to CMFDefault skin in ZCML [jensens]
 
+- fix condition for `details` richtext
+  [petschki]
+
 -Added italian translations
  [ale-rt]
 
