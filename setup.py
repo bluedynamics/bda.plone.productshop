@@ -1,44 +1,51 @@
 # -*- coding: utf-8 -*-
-"""Installer for the bda.plone.productshop package."""
-
 from setuptools import find_packages
 from setuptools import setup
+import os
 
 
-long_description = '\n\n'.join([
-    open('README.rst').read(),
-    open('CHANGES.rst').read(),
-])
+def read_file(name):
+    with open(os.path.join(os.path.dirname(__file__), name)) as f:
+        return f.read()
+
+
+version = '1.0b1.dev0'
+shortdesc = "Product shop extension based on bda.plone.shop"
+longdesc = '\n\n'.join([read_file(name) for name in [
+    'README.rst',
+    'CHANGES.rst',
+    'LICENSE.rst'
+]])
 
 
 setup(
     name='bda.plone.productshop',
-    version='1.0a1.dev0',
-    description="Product shop extension based on bda.plone.shop",
-    long_description=long_description,
-    # Get more from https://pypi.org/classifiers/
+    version=version,
+    description=shortdesc,
+    long_description=longdesc,
     classifiers=[
-        "Environment :: Web Environment",
         "Framework :: Plone",
+        "Framework :: Plone :: 6.0",
         "Framework :: Plone :: Addon",
-        "Framework :: Plone :: 5.2",
+        "Framework :: Zope",
+        "Framework :: Zope :: 5",
+        "License :: OSI Approved :: GNU General Public License (GPL)",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 2.7",
-        "Programming Language :: Python :: 3.6",
-        "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
-        "Operating System :: OS Independent",
-        "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "Topic :: Software Development :: Libraries :: Python Modules",
     ],
     keywords='Python Plone e-commerce',
     author='Bluedynamics Alliance',
     author_email='dev@bluedynamics.com',
-    url='https://github.com/collective/bda.plone.productshop',
+    url='https://github.com/bluedynamics/bda.plone.productshop',
     project_urls={
         'PyPI': 'https://pypi.python.org/pypi/bda.plone.productshop',
-        'Source': 'https://github.com/collective/bda.plone.productshop',
-        'Tracker': 'https://github.com/collective/bda.plone.productshop/issues',
-        # 'Documentation': 'https://bda.plone.productshop.readthedocs.io/en/latest/',
+        'Source': 'https://github.com/bluedynamics/bda.plone.productshop',
+        'Tracker': 'https://github.com/bluedynamics/bda.plone.productshop/issues'
     },
     license='GPL version 2',
     packages=find_packages('src', exclude=['ez_setup']),

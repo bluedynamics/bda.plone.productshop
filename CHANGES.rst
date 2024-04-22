@@ -1,9 +1,11 @@
+Changes
+=======
 
-Changelog
-=========
+1.0b1 (unreleased)
+------------------
 
-0.9.dev0
---------
+- Plone 6 compatibility.
+  [petschki, agitator]
 
 - Fix problem with AvailableVariantAspectsVocabulary not repescting named behaviors.
   [jensens]
@@ -30,7 +32,7 @@ Changelog
 - fix condition for `details` richtext
   [petschki]
 
--Added italian translations
+- Added italian translations
  [ale-rt]
 
 
