@@ -9,7 +9,7 @@ def read_file(name):
         return f.read()
 
 
-version = '1.0b1.dev0'
+version = '1.0b1'
 shortdesc = "Product shop extension based on bda.plone.shop"
 longdesc = '\n\n'.join([read_file(name) for name in [
     'README.rst',

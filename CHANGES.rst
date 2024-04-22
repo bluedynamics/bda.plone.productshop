@@ -1,7 +1,7 @@
 Changes
 =======
 
-1.0b1 (unreleased)
+1.0b1 (2024-04-22)
 ------------------
 
 - Plone 6 compatibility.
