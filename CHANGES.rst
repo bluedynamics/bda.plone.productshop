@@ -33,7 +33,7 @@ Changes
   [petschki]
 
 - Added italian translations
- [ale-rt]
+  [ale-rt]
 
 
 0.8
